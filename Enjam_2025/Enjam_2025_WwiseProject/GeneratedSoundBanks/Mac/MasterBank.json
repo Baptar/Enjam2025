@@ -1,0 +1,137 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1542108333",
+    "Type": "User",
+    "GUID": "{E280E47F-0000-4F65-96CA-C63F8AAB9E42}",
+    "Language": "SFX",
+    "Hash": "{4D35B300-F9C8-608C-6A84-ED94B28D4FB8}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MasterBank",
+    "ShortName": "MasterBank",
+    "Path": "MasterBank.bnk",
+    "Media": [
+     {
+      "Id": "953121653",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MUSIC_LEVEL_2.wav",
+      "CachePath": "74/{749D4515-3AC4-D51C-54FD-098C42775660}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2547633870",
+      "Name": "Play_Door",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Door",
+      "GUID": "{8913F5A9-0410-49FF-A9D8-9C578D2D8A5C}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2586345710",
+      "Name": "Play_FlipRoom",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_FlipRoom",
+      "GUID": "{79DFAC85-46CE-4D99-A930-C0B5B51E6AF3}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "1413020905",
+      "Name": "Play_FS_Player",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_FS_Player",
+      "GUID": "{80DCCB6F-B3F5-444B-BC96-66B01F113E30}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3621663528",
+      "Name": "Play_Interact",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Interact",
+      "GUID": "{AA50CA6A-73B9-4EA3-9CA1-46598CF9AAF0}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2755497438",
+      "Name": "Play_InteractPicture",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_InteractPicture",
+      "GUID": "{B3537EDF-AE47-4911-91E0-B0535F42827A}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2953849999",
+      "Name": "Play_Radio",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Radio",
+      "GUID": "{56A70222-D3DC-49FF-9FEE-F151F6CDC6FD}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "572923566",
+      "Name": "Play_SFX_DoorKnock",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_SFX_DoorKnock",
+      "GUID": "{A0D2A396-9127-4AB4-855E-25446C43E30D}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3401097362",
+      "Name": "Play_SFX_Light",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_SFX_Light",
+      "GUID": "{7894A09F-08C3-49A0-A428-52B7F22FF96E}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "173549051",
+      "Name": "Stop_FS_Player",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_FS_Player",
+      "GUID": "{317265A9-31F3-4665-B333-191FD016FAE3}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "4258653052",
+      "Name": "Test_Event",
+      "ObjectPath": "\\Events\\Default Work Unit\\Test_Event",
+      "GUID": "{EB1C9091-57E3-4520-ACAF-40F8CF710BB7}",
+      "DurationType": "OneShot",
+      "DurationMin": "130.67334",
+      "DurationMax": "130.67334",
+      "MediaRefs": [
+       {
+        "Id": "953121653"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{94BCCA54-402A-4EBE-646E-75C61911ADF8}"
+ }
+}

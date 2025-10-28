@@ -1,0 +1,15 @@
+Event	ID	Name			Wwise Object Path	Notes
+	173549051	Stop_FS_Player			\Default Work Unit\Stop_FS_Player	
+	572923566	Play_SFX_DoorKnock			\Default Work Unit\Play_SFX_DoorKnock	
+	1413020905	Play_FS_Player			\Default Work Unit\Play_FS_Player	
+	2547633870	Play_Door			\Default Work Unit\Play_Door	
+	2586345710	Play_FlipRoom			\Default Work Unit\Play_FlipRoom	
+	2755497438	Play_InteractPicture			\Default Work Unit\Play_InteractPicture	
+	2953849999	Play_Radio			\Default Work Unit\Play_Radio	
+	3401097362	Play_SFX_Light			\Default Work Unit\Play_SFX_Light	
+	3621663528	Play_Interact			\Default Work Unit\Play_Interact	
+	4258653052	Test_Event			\Default Work Unit\Test_Event	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	953121653	MUSIC_LEVEL_2	C:\Users\Heloxz\Documents\Unity\Projets\Enjam2025\Enjam_2025\Enjam_2025_WwiseProject\.cache\74\{749D4515-3AC4-D51C-54FD-098C42775660}.wem		\Actor-Mixer Hierarchy\Default Work Unit\MUSIC_LEVEL_2		25089376
+
