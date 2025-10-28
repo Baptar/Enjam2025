@@ -66,12 +66,10 @@ public class PlayerController : MonoBehaviour
         yaw += mouseX;
         pitch -= mouseY;
         pitch = Mathf.Clamp(pitch, -maxLookAngle, maxLookAngle);
-
-        // Définir la rotation cible
+        
         camTargetRot = Quaternion.Euler(pitch, 0f, 0f);
         bodyTargetRot = Quaternion.Euler(0f, yaw, 0f);
-
-        // Lissage réel ici :
+        
         cameraTransform.localRotation = Quaternion.Slerp(
             cameraTransform.localRotation,
             camTargetRot,
@@ -121,24 +119,16 @@ public class PlayerController : MonoBehaviour
 
         float speedPercent = currentMove.magnitude / runSpeed;
         float effectiveSpeed = Mathf.Clamp01(speedPercent);
-
-        // --- fréquence adaptée ---
         float frequency = Mathf.Lerp(0.8f, bobFrequency * (effectiveSpeed > 0.6f ? bobRunMultiplier : 1f), effectiveSpeed);
-
-        // --- intensité adaptée ---
         float amplitude = Mathf.Lerp(0.02f, bobAmplitude, effectiveSpeed);
-
-        // --- timer ---
+        
         bobTimer += Time.deltaTime * frequency * Mathf.Max(0.3f, effectiveSpeed + 0.2f);
-
-        // --- respirations + micro-balancements ---
+        
         float verticalBob = Mathf.Sin(bobTimer * Mathf.PI * 2f) * amplitude;
         float horizontalBob = Mathf.Cos(bobTimer * Mathf.PI * 1f) * amplitude * 0.5f;
-
-        // --- mix respiration et marche ---
+        
         Vector3 targetPos = defaultCamPos + new Vector3(horizontalBob, verticalBob, 0f);
-
-        // --- lissage fluide ---
+        
         cameraTransform.localPosition = Vector3.Lerp(
             cameraTransform.localPosition,
             targetPos,

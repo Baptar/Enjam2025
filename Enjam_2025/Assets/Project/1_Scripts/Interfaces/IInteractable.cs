@@ -4,8 +4,8 @@ public interface IInteractable
 {
     bool GetIsInteractable();
     void SetIsInteractable(bool value);
-    string GetInteractPrompt();      // Texte à afficher (ex : "Open door")
-    void Interact(PlayerInteractor interactor); // Action à exécuter
+    string GetInteractPrompt();  
+    void Interact(PlayerInteractor interactor);
     
     void OnHovered(PlayerInteractor interactor);
     
