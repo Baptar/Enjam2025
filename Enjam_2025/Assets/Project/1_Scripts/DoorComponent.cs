@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Outline))]
@@ -9,12 +10,18 @@ public class DoorComponent : MonoBehaviour, IInteractable
     [SerializeField] private int doorIDLinked;
     [SerializeField] private Transform coridorTransform;
     [SerializeField] private bool isInteratable;
+    [SerializeField] private int doorNumber;
     
     [Space(10)]
     [Header("Open Door")]
     [SerializeField] private float newRotateValue;
-    [SerializeField] private GameObject[] elementToRemoveWhenOpenDoor;
     [SerializeField] private float durationRotate;
+    
+    [Space(10)]
+    [Header("References")]
+    [SerializeField] private GameObject[] elementToRemoveWhenOpenDoor;
+    [SerializeField] private TMP_Text doorNumberText;
+    [SerializeField] private TMP_Text doorNumberBehindText;
     [SerializeField] private GameObject doorCenter;
     [SerializeField] private GameObject moveTarget;
     
@@ -25,6 +32,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
     {
         outline = GetComponent<Outline>();
         startRotateValue = gameObject.transform.localEulerAngles.y;
+        doorNumberText.text = doorNumber.ToString();
     }
     
 
@@ -69,7 +77,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
         
         if (coridor.TryGetComponent(out CoridorGenerated coridorGenerated))
         {
-            coridorGenerated.OnCoridorGenerated();
+            coridorGenerated.OnCoridorGenerated(doorNumber);
         }
     }
     
@@ -142,5 +150,10 @@ public class DoorComponent : MonoBehaviour, IInteractable
             }));
 
         seq.Play();
+    }
+
+    public void SetDoorNumberBehind(int number)
+    {
+        doorNumberBehindText.text = number.ToString();
     }
 }

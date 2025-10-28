@@ -5,7 +5,8 @@ public class DoorsManager : MonoBehaviour
     public static DoorsManager instance;
     [SerializeField] private GameObject[] coridorListID;
 
-    private GameObject previousCoridor;
+    [Header("DEBUG")]
+    public GameObject previousCoridor;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake() => instance = this;
