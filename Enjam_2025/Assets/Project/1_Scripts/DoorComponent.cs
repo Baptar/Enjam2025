@@ -8,9 +8,11 @@ public class DoorComponent : MonoBehaviour, IInteractable
 {
     [Header("Settings")]
     [SerializeField] private int doorIDLinked;
-    [SerializeField] private Transform coridorTransform;
-    [SerializeField] private bool isInteratable;
+    [SerializeField] private Transform corridorTransform;
+    [SerializeField] private bool isInteractable;
     [SerializeField] private int doorNumber;
+    [SerializeField] private bool initDoorNumberAtStart = true;
+    [SerializeField] private bool makeItDisappearAfterOpen = false;
     
     [Space(10)]
     [Header("Open Door")]
@@ -32,16 +34,16 @@ public class DoorComponent : MonoBehaviour, IInteractable
     {
         outline = GetComponent<Outline>();
         startRotateValue = gameObject.transform.localEulerAngles.y;
-        doorNumberText.text = doorNumber.ToString();
+        if (initDoorNumberAtStart) doorNumberText.text = doorNumber.ToString();
     }
     
 
     /// <summary>
     /// Interface Functions
     /// </summary>
-    public bool GetIsInteractable() => isInteratable;
+    public bool GetIsInteractable() => isInteractable;
 
-    public void SetIsInteractable(bool value) => isInteratable = value;
+    public void SetIsInteractable(bool value) => isInteractable = value;
     
     public string GetInteractPrompt() => "Open Door";
 
@@ -70,30 +72,30 @@ public class DoorComponent : MonoBehaviour, IInteractable
         foreach (GameObject go in elementToRemoveWhenOpenDoor)
             go.SetActive(false);
         
-        // generate new coridor
-        GameObject coridor = GenerateCoridorAssociated();
-        if (coridor == null) return;
+        // generate new corridor
+        GameObject corridor = GenerateCorridorAssociated();
+        if (corridor == null) return;
         
         
-        if (coridor.TryGetComponent(out CoridorGenerated coridorGenerated))
+        if (corridor.TryGetComponent(out CorridorGenerated corridorGenerated))
         {
-            coridorGenerated.OnCoridorGenerated(doorNumber);
+            corridorGenerated.OnCorridorGenerated(doorNumber);
         }
     }
     
-    private GameObject GenerateCoridorAssociated()
+    private GameObject GenerateCorridorAssociated()
     {
-        GameObject coridorGo = DoorsManager.instance.GetCoridorAssociated(doorIDLinked);
-        if (coridorGo == null)
+        GameObject corridorGo = CorridorsManager.instance.GetCorridorAssociated(doorIDLinked);
+        if (corridorGo == null)
         {
-            Debug.Log("Coridor associated with doorIDLinked = " + doorIDLinked + " not found");
+            Debug.Log("Corridor associated with doorIDLinked = " + doorIDLinked + " not found");
             return null;
         }
         
-        return Instantiate(coridorGo, coridorTransform.position, coridorTransform.rotation);
+        return Instantiate(corridorGo, corridorTransform.position, corridorTransform.rotation);
     }
 
-    public void OpenDoor(CoridorGenerated coridorGenerated)
+    public void OpenDoor(CorridorGenerated corridorGenerated)
     {
         PlayerController playerController = PlayerController.instance;
         
@@ -130,6 +132,10 @@ public class DoorComponent : MonoBehaviour, IInteractable
                 playerController.enabled = true; 
                 PlayerController.instance.SetYaw(targetEuler.y);
                 playerController.blockCamera = false;  
+                if (makeItDisappearAfterOpen) 
+                    // deactivate elements of door to make the new one appear at the same place
+                    foreach (GameObject go in elementToRemoveWhenOpenDoor)
+                        go.SetActive(false);
             }))
             // move door
             .Insert(1.7f,
@@ -137,11 +143,11 @@ public class DoorComponent : MonoBehaviour, IInteractable
                     .DOLocalRotate(
                         new Vector3(gameObject.transform.localEulerAngles.x, startRotateValue,
                             gameObject.transform.localEulerAngles.z), durationRotate).SetEase(Ease.InOutFlash))
-            // manage coridor Data
+            // manage corridor Data
             .Append(DOVirtual.DelayedCall(0, () =>
             {
-                DoorsManager.instance.RemovePreviousCoridor();
-                DoorsManager.instance.SetPreviousCoridor(coridorGenerated.gameObject);
+                CorridorsManager.instance.RemovePreviousCorridor();
+                CorridorsManager.instance.SetPreviousCorridor(corridorGenerated.gameObject);
             }))
             // make this door interactable
             .Append(DOVirtual.DelayedCall(0, () =>

@@ -265,9 +265,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorIDLinked: 1
-  coridorTransform: {fileID: 8242411057067397103}
-  isInteratable: 1
+  corridorTransform: {fileID: 8242411057067397103}
+  isInteractable: 1
   doorNumber: 0
+  initDoorNumberAtStart: 1
+  makeItDisappearAfterOpen: 0
   newRotateValue: -87.775
   durationRotate: 1.5
   elementToRemoveWhenOpenDoor:

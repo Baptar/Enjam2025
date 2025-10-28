@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class CoridorGenerated : MonoBehaviour
+public class CorridorGenerated : MonoBehaviour
 {
     [SerializeField] private DoorComponent firstDoorOfCoridor;
     [SerializeField] private bool isFirstCoridor = false;
@@ -9,10 +9,10 @@ public class CoridorGenerated : MonoBehaviour
 
     private void Start()
     {
-        if (isFirstCoridor) DoorsManager.instance.SetPreviousCoridor(gameObject);
+        if (isFirstCoridor) CorridorsManager.instance.SetPreviousCorridor(gameObject);
     }
     
-    public void OnCoridorGenerated(int doorNumber)
+    public void OnCorridorGenerated(int doorNumber)
     {
         firstDoorOfCoridor.SetDoorNumberBehind(doorNumber);
             
