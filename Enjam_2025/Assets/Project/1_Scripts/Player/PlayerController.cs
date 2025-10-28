@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public float mouseSensitivity = 80f;
     public float cameraSmooth = 8f;
     public float maxLookAngle = 85f;
+    public bool blockCamera = false;
 
     [Space(10)]
     [Header("Head Bobbing")]
@@ -53,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        HandleLook();
+        if (!blockCamera) HandleLook();
         HandleMovement();
         HandleHeadBob();
     }
@@ -134,5 +135,10 @@ public class PlayerController : MonoBehaviour
             targetPos,
             Time.deltaTime * bobSmooth
         );
+    }
+    
+    public void SetYaw(float newYaw)
+    {
+        yaw = newYaw;
     }
 }

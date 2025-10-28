@@ -87,43 +87,55 @@ public class DoorComponent : MonoBehaviour, IInteractable
 
     public void OpenDoor(CoridorGenerated coridorGenerated)
     {
-        PlayerController.instance.enabled = false;
+        PlayerController playerController = PlayerController.instance;
+        
+        // remove player input
+        playerController.enabled = false;
+        
+        // remove player look (to fix an issue camera position comes back)
+        playerController.blockCamera = true;
         
         // look center of door
-        Transform playerTransform = PlayerController.instance.gameObject.transform;
+        Transform playerTransform = playerController.gameObject.transform;
         Vector3 lookDirection = moveTarget.transform.position - playerTransform.position;
-        lookDirection.y = 0f; // ignore la verticale
+        lookDirection.y = 0f; // ignore verticality
         Quaternion targetRot = Quaternion.LookRotation(lookDirection);
         Vector3 targetEuler = targetRot.eulerAngles;
         float rotationDuration = 0.8f;
         Ease rotationEase = Ease.InOutSine;
         playerTransform.DORotate(targetEuler, rotationDuration, RotateMode.Fast)
             .SetEase(rotationEase);
-
+        
 
         Sequence seq = DOTween.Sequence();
         // open door
         seq.Append(gameObject.transform.DOLocalRotate(new Vector3(gameObject.transform.localEulerAngles.x, newRotateValue, gameObject.transform.localEulerAngles.z), durationRotate).SetEase(Ease.InOutFlash));
         
         // move player
-        Vector3 targetLocalPosition = new Vector3(moveTarget.transform.position.x, PlayerController.instance.gameObject.transform.position.y, moveTarget.transform.position.z);
+        Vector3 targetLocalPosition = new Vector3(moveTarget.transform.position.x, playerController.gameObject.transform.position.y, moveTarget.transform.position.z);
         seq.Insert(0.7f,
-                PlayerController.instance.gameObject.transform.DOMove(targetLocalPosition, 2.0f)
+                playerController.gameObject.transform.DOMove(targetLocalPosition, 2.0f)
                     .SetEase(Ease.InOutSine))
+            // add player input
             .Insert(2.0f, DOVirtual.DelayedCall(0, () =>
             {
-                PlayerController.instance.enabled = true;
+                playerController.enabled = true; 
+                PlayerController.instance.SetYaw(targetEuler.y);
+                playerController.blockCamera = false;  
             }))
+            // move door
             .Insert(1.7f,
                 gameObject.transform
                     .DOLocalRotate(
                         new Vector3(gameObject.transform.localEulerAngles.x, startRotateValue,
                             gameObject.transform.localEulerAngles.z), durationRotate).SetEase(Ease.InOutFlash))
+            // manage coridor Data
             .Append(DOVirtual.DelayedCall(0, () =>
             {
                 DoorsManager.instance.RemovePreviousCoridor();
                 DoorsManager.instance.SetPreviousCoridor(coridorGenerated.gameObject);
             }))
+            // make this door interactable
             .Append(DOVirtual.DelayedCall(0, () =>
             {
                 SetIsInteractable(true);

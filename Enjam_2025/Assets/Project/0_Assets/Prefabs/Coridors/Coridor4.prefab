@@ -310,7 +310,6 @@ Transform:
   - {fileID: 680420451443158074}
   - {fileID: 4269147494948059024}
   - {fileID: 3255684311900999871}
-  - {fileID: 8577404166615092360}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1193658168998173005
@@ -326,37 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstDoorOfCoridor: {fileID: 6808010766010299024}
---- !u!1 &5424311994322967322
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8577404166615092360}
-  m_Layer: 0
-  m_Name: Ref Transform
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8577404166615092360
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5424311994322967322}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.606476, y: 5.373235, z: -1.928609}
-  m_LocalScale: {x: 0.6535947, y: 0.65359473, z: 0.6535947}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1185305880869160947}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  isFirstCoridor: 0
 --- !u!1 &6350819487759921366
 GameObject:
   m_ObjectHideFlags: 0
