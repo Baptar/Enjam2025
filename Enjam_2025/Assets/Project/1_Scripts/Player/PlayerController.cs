@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public float cameraSmooth = 8f;
     public float maxLookAngle = 85f;
     public bool blockCamera = false;
+    public bool isInspectingRadio = false;
 
     [Space(10)]
     [Header("Head Bobbing")]
@@ -55,9 +56,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!blockCamera) HandleLook();
-        HandleMovement();
-        HandleHeadBob();
+        if (!blockCamera && !isInspectingRadio) HandleLook();
+        if (!isInspectingRadio) HandleMovement();
+        if (!isInspectingRadio) HandleHeadBob();
     }
 
     void HandleLook()
