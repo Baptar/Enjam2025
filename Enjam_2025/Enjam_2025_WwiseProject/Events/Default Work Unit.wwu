@@ -23,6 +23,7 @@
 				<Event Name="Play_InteractPicture" ID="{B3537EDF-AE47-4911-91E0-B0535F42827A}"/>
 				<Event Name="Play_Interact" ID="{AA50CA6A-73B9-4EA3-9CA1-46598CF9AAF0}"/>
 				<Event Name="Play_Door" ID="{8913F5A9-0410-49FF-A9D8-9C578D2D8A5C}"/>
+				<Event Name="Play_AMB" ID="{FAD75230-8606-475E-9E00-FFCF32CD615B}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
