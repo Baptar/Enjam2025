@@ -703,6 +703,63 @@ Transform:
   - {fileID: 1636553396}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1365090099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1365090101}
+  - component: {fileID: 1365090100}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1365090100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365090099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68b6c2869a215245b593fb6c0d7625e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: 13319c3fd9fc92242acd839ce181450f, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &1365090101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365090099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1636553393
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,14 +1021,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8012526186512802650, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4607974354796620242, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1262363629}
+    - targetCorrespondingSourceObject: {fileID: 2700125204493302126, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1483413948787804880}
+    - targetCorrespondingSourceObject: {fileID: 2700125204493302126, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1483413948787804879}
   m_SourcePrefab: {fileID: 100100000, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
+--- !u!1 &1483413948787804878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2700125204493302126, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
+  m_PrefabInstance: {fileID: 1483413948787804877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1483413948787804879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483413948787804878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c968eba1a16befc45a91a9e1e2daae94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  bOverrideScalingFactor: 0
+  scalingFactor: -1
+  listenerId: 0
+--- !u!114 &1483413948787804880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483413948787804878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40097cbc2b5c2d3408b41a8c0f2b99f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!4 &6758473659870075414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1185305880869160947, guid: 729819869a28bd14babf106459e5f5a8, type: 3}
@@ -985,3 +1094,4 @@ SceneRoots:
   - {fileID: 1284214859}
   - {fileID: 914256513}
   - {fileID: 1334337939}
+  - {fileID: 1365090101}
