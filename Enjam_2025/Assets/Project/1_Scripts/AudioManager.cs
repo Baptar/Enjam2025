@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -8,7 +9,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event ambiance;
     [SerializeField] private AK.Wwise.Event radioEvent;
     [SerializeField] private AK.Wwise.Event footStepEvent;/////////////////////////////TO TEST
-    [SerializeField] private AK.Wwise.Event stopFootStepEvent;/////////////////////////////TO TEST
     [SerializeField] private AK.Wwise.Event doorOpenEvent;/////////////////////////////TO TEST
     [SerializeField] private AK.Wwise.Event doorKnockEvent;/////////////////////////////TO TEST
     [SerializeField] private AK.Wwise.Event lightEvent;/////////////////////////////TO TEST
@@ -16,21 +16,23 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event interactPaintEvent;////////////////////////////TO TEST
     [SerializeField] private AK.Wwise.Event flipRoomEvent;////////////////////////////TO TEST
 
+
+    private uint playing_FS_ID;
+    
     private void Awake() => instance = this;
 
-    public void PlayAmbiance()
-    {
-        // je sais pas 
-    }
+    private void Start() => PlayAmbiance();
+
+    private void PlayAmbiance() => ambiance.Post(gameObject);
 
     public void PlayRadio()
     {
         // je sais pas
     }
-    
-    public void PlaySoundFootStep() => footStepEvent.Post(gameObject);
-    
-    public void StopPlaySoundFootStep() => stopFootStepEvent.Post(gameObject);
+
+    public void PlaySoundFootStep() => playing_FS_ID = footStepEvent.Post(gameObject);
+
+    public void StopPlaySoundFootStep() => AkSoundEngine.StopPlayingID(playing_FS_ID);
     
     public void PlaySoundDoorKnock(GameObject door) => doorKnockEvent.Post(door);
     

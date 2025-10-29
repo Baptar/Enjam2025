@@ -77,7 +77,7 @@ public class DoorEndComponent : MonoBehaviour, IInteractable
     /// </summary>
     private void OnInteract()
     {
-        AudioManager.instance.PlaySoundInteract();
+        //AudioManager.instance.PlaySoundInteract();
         
         // can't interact with anymore
         SetIsInteractable(false);
@@ -108,6 +108,7 @@ public class DoorEndComponent : MonoBehaviour, IInteractable
             .SetEase(rotationEase);
         
 
+        AudioManager.instance.PlaySoundDoorOpen();
         Sequence seq = DOTween.Sequence();
         // open door
         seq.Append(gameObject.transform.DOLocalRotate(new Vector3(gameObject.transform.localEulerAngles.x, -newRotateValue, gameObject.transform.localEulerAngles.z), durationRotate).SetEase(Ease.InOutFlash));

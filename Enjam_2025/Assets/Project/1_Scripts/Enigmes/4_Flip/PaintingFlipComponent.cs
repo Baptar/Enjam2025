@@ -39,6 +39,7 @@ public class PaintingFlipComponent : MonoBehaviour, IInteractable
     {
         if (!GetIsInteractable()) return;
         
+        AudioManager.instance.PlaySoundInteract();
         AudioManager.instance.PlaySoundInteractPaint();
         
         Vector3 newEulerRoration =new Vector3(gameObject.transform.localEulerAngles.x, gameObject.transform.localEulerAngles.y,
