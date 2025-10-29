@@ -1,4 +1,18 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	677752376	Radio2			\Default Work Unit\Radio2	
+	677752379	Radio1			\Default Work Unit\Radio1	
+
+State	ID	Name	State Group			Notes
+	33408553	Noise	Radio2			
+	623086306	Sound	Radio2			
+	748895195	None	Radio2			
+	33408553	Noise	Radio1			
+	623086306	Sound	Radio1			
+	748895195	None	Radio1			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	1117531639	AMB			\Default Work Unit\Master Audio Bus\AMB	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Audio Devices	ID	Name	Type				Notes

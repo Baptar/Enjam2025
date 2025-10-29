@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B58C90BB-05F0-4676-9795-B73C3A543112}" SchemaVersion="123">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{B58C90BB-05F0-4676-9795-B73C3A543112}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B58C90BB-05F0-4676-9795-B73C3A543112}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="GP_Footsteps" ID="{E6FC9CBF-8716-49E9-AF89-C5696E4097BC}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
