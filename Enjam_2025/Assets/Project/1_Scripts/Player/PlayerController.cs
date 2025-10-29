@@ -106,6 +106,12 @@ public class PlayerController : MonoBehaviour
             playerVelocity.y += gravity * Time.deltaTime;
 
         controller.Move(playerVelocity * Time.deltaTime);
+        
+        // --- Footstep logic ---
+        bool currentlyMoving = controller.isGrounded && currentMove.magnitude > 0.1f;
+    
+        if (currentlyMoving) AudioManager.instance.PlaySoundFootStep();
+        else AudioManager.instance.StopPlaySoundFootStep();
     }
 
     void HandleHeadBob()

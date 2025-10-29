@@ -2,7 +2,7 @@ using DG.Tweening;
 using UnityEngine;
 
 [RequireComponent(typeof(Outline))]
-public class PaintingComponent : MonoBehaviour, IInteractable
+public class PaintingFlipComponent : MonoBehaviour, IInteractable
 {
     [SerializeField] private bool isFlipped;
     [SerializeField] private bool isInteractable = false;
@@ -39,13 +39,15 @@ public class PaintingComponent : MonoBehaviour, IInteractable
     {
         if (!GetIsInteractable()) return;
         
+        AudioManager.instance.PlaySoundInteractPaint();
+        
         Vector3 newEulerRoration =new Vector3(gameObject.transform.localEulerAngles.x, gameObject.transform.localEulerAngles.y,
             (gameObject.transform.localEulerAngles.z - 180) % 360);
-        gameObject.transform.DOLocalRotate(newEulerRoration, 2.0f).SetEase(Ease.InElastic)
+        gameObject.transform.DOLocalRotate(newEulerRoration, 2.0f).SetEase(Ease.InOutFlash)
             .OnComplete((() =>
             {
                 isFlipped = !isFlipped;
-                PaintingManagers.Instance.CheckPaintingFlipped();
+                PaintingFlipManagers.Instance.CheckPaintingFlipped();
             }));
     }
 

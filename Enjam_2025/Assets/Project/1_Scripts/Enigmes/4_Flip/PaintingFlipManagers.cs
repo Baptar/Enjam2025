@@ -2,25 +2,27 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-public class PaintingManagers : MonoBehaviour
+public class PaintingFlipManagers : MonoBehaviour
 {
-    public static PaintingManagers Instance;
+    public static PaintingFlipManagers Instance;
     
-    [SerializeField] private PaintingComponent[] paintingComponents;
+    [SerializeField] private PaintingFlipComponent[] paintingComponents;
     [SerializeField] private TMP_Text doorText;
     [SerializeField] private GameObject corridorGo;
     [SerializeField] private float durationRotate = 5.0f;
     [SerializeField] private Ease ease = Ease.Linear;
+    [SerializeField] private DoorComponent doorEnd;
 
     private void Awake() => Instance = this;
 
     private void Start()
     {
         doorText.text = "End";
+        doorEnd.SetIsInteractable(false);
     }
     public void CheckPaintingFlipped()
     {
-        foreach (PaintingComponent paintingComponent in paintingComponents)
+        foreach (PaintingFlipComponent paintingComponent in paintingComponents)
         {
             if (paintingComponent.GetIsFlipped())
                 return;
@@ -31,9 +33,15 @@ public class PaintingManagers : MonoBehaviour
 
     private void FlipRoom()
     {
+        AudioManager.instance.PlaySoundFlipRoom();
+        
         Debug.Log("Flip Room");
         ChangeTextDoor();
-        corridorGo.transform.DOLocalRotate(new Vector3(-180, corridorGo.transform.localEulerAngles.y, corridorGo.transform.localEulerAngles.z), durationRotate).SetEase(ease);
+        corridorGo.transform.DOLocalRotate(new Vector3(-180, corridorGo.transform.localEulerAngles.y, corridorGo.transform.localEulerAngles.z), durationRotate).SetEase(ease)
+            .OnComplete(() =>
+            {
+                doorEnd.SetIsInteractable(true);
+            });
     }
 
     private void ChangeTextDoor()
