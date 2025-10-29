@@ -14,16 +14,146 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_FS_Player" ID="{80DCCB6F-B3F5-444B-BC96-66B01F113E30}"/>
-				<Event Name="Stop_FS_Player" ID="{317265A9-31F3-4665-B333-191FD016FAE3}"/>
-				<Event Name="Play_Radio" ID="{56A70222-D3DC-49FF-9FEE-F151F6CDC6FD}"/>
+				<Event Name="Play_FS_Player" ID="{80DCCB6F-B3F5-444B-BC96-66B01F113E30}">
+					<ChildrenList>
+						<Action Name="" ID="{DFECBA58-505D-4E0D-B7AD-3D86F0E45240}" ShortID="1031537124">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FS_Player" ID="{735CC7BD-1B59-41C7-B557-33265A758A94}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_FS_Player" ID="{317265A9-31F3-4665-B333-191FD016FAE3}">
+					<ChildrenList>
+						<Action Name="" ID="{3DBD07AE-9335-4B95-812E-EA50755F5586}" ShortID="72272268">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FS_Player" ID="{735CC7BD-1B59-41C7-B557-33265A758A94}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Radio" ID="{56A70222-D3DC-49FF-9FEE-F151F6CDC6FD}">
+					<ChildrenList>
+						<Action Name="" ID="{F49C2A9C-F0AE-4658-893F-C0A243421230}" ShortID="290189178">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DrumBass" ID="{6F4DA038-4BD2-43E6-B56E-0BB31CED369A}" WorkUnitID="{61C748EF-DF38-46D4-B3CA-2BE456EF7D22}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F85B4A6E-C98A-4D74-8F77-71D21370E653}" ShortID="153679267">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MeloKey" ID="{6FDD4182-C627-4AE5-8169-9367727E5FC0}" WorkUnitID="{61C748EF-DF38-46D4-B3CA-2BE456EF7D22}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Play_SFX_Light" ID="{7894A09F-08C3-49A0-A428-52B7F22FF96E}"/>
-				<Event Name="Play_SFX_DoorKnock" ID="{A0D2A396-9127-4AB4-855E-25446C43E30D}"/>
+				<Event Name="Play_SFX_DoorKnock" ID="{A0D2A396-9127-4AB4-855E-25446C43E30D}">
+					<ChildrenList>
+						<Action Name="" ID="{41877B01-BB69-4197-8E9C-E17EC5D7CFE2}" ShortID="958240541">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Puzzle_Knock" ID="{FDA6C8D4-6376-4BCF-A8A0-E36EE553D8B2}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Play_FlipRoom" ID="{79DFAC85-46CE-4D99-A930-C0B5B51E6AF3}"/>
 				<Event Name="Play_InteractPicture" ID="{B3537EDF-AE47-4911-91E0-B0535F42827A}"/>
 				<Event Name="Play_Interact" ID="{AA50CA6A-73B9-4EA3-9CA1-46598CF9AAF0}"/>
-				<Event Name="Play_Door" ID="{8913F5A9-0410-49FF-A9D8-9C578D2D8A5C}"/>
-				<Event Name="Play_AMB" ID="{FAD75230-8606-475E-9E00-FFCF32CD615B}"/>
+				<Event Name="Play_Door" ID="{8913F5A9-0410-49FF-A9D8-9C578D2D8A5C}">
+					<ChildrenList>
+						<Action Name="" ID="{5CC39932-ED78-482A-B40D-CAD3CBDCE38B}" ShortID="703261864">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Door" ID="{2627AD00-5850-48D0-A9F9-D6D50E41B0B4}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AMB" ID="{FAD75230-8606-475E-9E00-FFCF32CD615B}">
+					<ChildrenList>
+						<Action Name="" ID="{3DD5B6D1-1AB1-4649-BEC5-DCD434CDB9DA}" ShortID="10144555">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Roomtone" ID="{1590DFE1-3F1F-4142-BDAA-3674B6C81222}" WorkUnitID="{E61DD6C2-82BD-4D33-943F-66FC48BFE6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5E585486-FACD-40AE-B8E1-4FBCCFC09F98}" ShortID="494268239">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="5">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1334E0E4-4E96-4AEF-A2BA-D4B043917132}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Random_Add" ID="{34D9765A-2844-4226-8CFC-6FF51AFEF9DC}" WorkUnitID="{E61DD6C2-82BD-4D33-943F-66FC48BFE6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9F3C56DE-2779-4922-812A-92452F59F13F}" ShortID="729202363">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="10">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{429A1309-1D53-4EBF-BAB8-8F6F59823162}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Random_Addd" ID="{89089E21-0369-4053-8CEB-589DD29A611D}" WorkUnitID="{E61DD6C2-82BD-4D33-943F-66FC48BFE6F7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Interact_Radio" ID="{6BBA6F00-4162-4800-9DC4-99C7DB4EAC5E}">
+					<ChildrenList>
+						<Action Name="" ID="{04395EE5-EABE-46BF-8B17-8C8ACE7D3F72}" ShortID="215111273">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Radio_Freq" ID="{B57BDAC5-62F8-4A71-8105-88B51B08FF9C}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

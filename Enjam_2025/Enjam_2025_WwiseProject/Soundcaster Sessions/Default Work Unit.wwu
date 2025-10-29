@@ -4,6 +4,56 @@
 		<WorkUnit Name="Default Work Unit" ID="{A37084EC-4004-497F-A0CB-5D4F10A2ED0E}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="SoundCaster" ID="{D47BA1CE-A5D5-4D8F-BEA5-B99D44512EC4}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_AMB" ID="{FAD75230-8606-475E-9E00-FFCF32CD615B}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_FS_Player" ID="{80DCCB6F-B3F5-444B-BC96-66B01F113E30}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_InteractPicture" ID="{B3537EDF-AE47-4911-91E0-B0535F42827A}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SFX_Light" ID="{7894A09F-08C3-49A0-A428-52B7F22FF96E}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Door" ID="{8913F5A9-0410-49FF-A9D8-9C578D2D8A5C}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Interact" ID="{AA50CA6A-73B9-4EA3-9CA1-46598CF9AAF0}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Radio" ID="{56A70222-D3DC-49FF-9FEE-F151F6CDC6FD}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_FS_Player" ID="{317265A9-31F3-4665-B333-191FD016FAE3}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_FlipRoom" ID="{79DFAC85-46CE-4D99-A930-C0B5B51E6AF3}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Interact_Radio" ID="{6BBA6F00-4162-4800-9DC4-99C7DB4EAC5E}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SFX_DoorKnock" ID="{A0D2A396-9127-4AB4-855E-25446C43E30D}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Test_Event" ID="{EB1C9091-57E3-4520-ACAF-40F8CF710BB7}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
