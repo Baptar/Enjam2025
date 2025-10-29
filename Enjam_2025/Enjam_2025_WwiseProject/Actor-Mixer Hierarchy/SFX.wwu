@@ -18,6 +18,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="Radio_Freq" ID="{B57BDAC5-62F8-4A71-8105-88B51B08FF9C}" ShortID="16509084">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
@@ -140,7 +147,14 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Puzzle_Knock" ID="{FDA6C8D4-6376-4BCF-A8A0-E36EE553D8B2}" ShortID="822484583">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Puzzle_Attenuation" ID="{FBDFA799-CE34-4C44-8323-EA35D9DF572B}" WorkUnitID="{64CD8246-47FC-4666-83DC-946C4A41B997}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
 								</Reference>
@@ -150,6 +164,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Puzzle_Knock_001" ID="{2714A8C2-70A6-408E-A243-90E4395D4E42}" ShortID="101739467">
+									<PropertyList>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>

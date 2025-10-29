@@ -54,8 +54,16 @@
 							<Position X="4" Y="4"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="GP_Footsteps" ID="{E6FC9CBF-8716-49E9-AF89-C5696E4097BC}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Sound" ID="{306E41DB-A40B-4663-88E4-D0FC739A19B3}"/>
+						<CurrentStateRef Name="Sound" ID="{AEA67108-1AC0-461B-A57A-DC6A828DB332}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>
