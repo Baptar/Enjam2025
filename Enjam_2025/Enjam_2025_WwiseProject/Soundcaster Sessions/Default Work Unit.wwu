@@ -38,6 +38,10 @@
 							<Position X="3" Y="4"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Stop_FlipRoom" ID="{E92C83A0-9640-4CCD-8C60-3C126F986230}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_FlipRoom" ID="{79DFAC85-46CE-4D99-A930-C0B5B51E6AF3}" WorkUnitID="{19ED836F-EF74-41A4-A94C-A339C9E10CB8}"/>
 							<Position X="4" Y="1"/>
 						</Module>

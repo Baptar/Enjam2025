@@ -13,15 +13,20 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_AMB = 2959533290U;
         static const AkUniqueID PLAY_DOOR = 2547633870U;
         static const AkUniqueID PLAY_FLIPROOM = 2586345710U;
         static const AkUniqueID PLAY_FS_PLAYER = 1413020905U;
         static const AkUniqueID PLAY_INTERACT = 3621663528U;
+        static const AkUniqueID PLAY_INTERACT_RADIO = 227546076U;
         static const AkUniqueID PLAY_INTERACTPICTURE = 2755497438U;
         static const AkUniqueID PLAY_RADIO = 2953849999U;
         static const AkUniqueID PLAY_SFX_DOORKNOCK = 572923566U;
         static const AkUniqueID PLAY_SFX_LIGHT = 3401097362U;
+        static const AkUniqueID STOP_ALL = 452547817U;
+        static const AkUniqueID STOP_FLIPROOM = 3097110780U;
         static const AkUniqueID STOP_FS_PLAYER = 173549051U;
+        static const AkUniqueID STOP_RADIO = 151474297U;
         static const AkUniqueID TEST_EVENT = 4258653052U;
     } // namespace EVENTS
 

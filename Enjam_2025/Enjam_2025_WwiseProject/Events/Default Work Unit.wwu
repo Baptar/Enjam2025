@@ -61,7 +61,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_SFX_Light" ID="{7894A09F-08C3-49A0-A428-52B7F22FF96E}"/>
+				<Event Name="Play_SFX_Light" ID="{7894A09F-08C3-49A0-A428-52B7F22FF96E}">
+					<ChildrenList>
+						<Action Name="" ID="{3F113392-03C9-4C37-A0CD-961D3CC0EF61}" ShortID="878785693">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Tik_Lamp" ID="{F44CBBED-7781-491B-A4B8-3EA9ECE27774}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Play_SFX_DoorKnock" ID="{A0D2A396-9127-4AB4-855E-25446C43E30D}">
 					<ChildrenList>
 						<Action Name="" ID="{41877B01-BB69-4197-8E9C-E17EC5D7CFE2}" ShortID="958240541">
@@ -73,9 +83,49 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_FlipRoom" ID="{79DFAC85-46CE-4D99-A930-C0B5B51E6AF3}"/>
-				<Event Name="Play_InteractPicture" ID="{B3537EDF-AE47-4911-91E0-B0535F42827A}"/>
-				<Event Name="Play_Interact" ID="{AA50CA6A-73B9-4EA3-9CA1-46598CF9AAF0}"/>
+				<Event Name="Play_FlipRoom" ID="{79DFAC85-46CE-4D99-A930-C0B5B51E6AF3}">
+					<ChildrenList>
+						<Action Name="" ID="{4313379C-5D6E-4193-910D-055E2DBD7E4A}" ShortID="723203537">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Flip_start" ID="{3676E2DE-D78D-4C8B-82C3-3EE8123B1811}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EC9151BE-C5B5-4771-8386-E3983CC8924A}" ShortID="1012079831">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Flip_loop" ID="{C6860CDA-56BE-48A5-B191-9EF9537D6931}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_InteractPicture" ID="{B3537EDF-AE47-4911-91E0-B0535F42827A}">
+					<ChildrenList>
+						<Action Name="" ID="{14A5C106-28C9-4BF0-A97B-3D8BFEDD8247}" ShortID="562145239">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Flip_Painting" ID="{23B9A4EF-DAB1-4217-9FC8-1FB9D745E4CC}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Interact" ID="{AA50CA6A-73B9-4EA3-9CA1-46598CF9AAF0}">
+					<ChildrenList>
+						<Action Name="" ID="{DDBEC64A-8CBA-464A-840F-CD09AE8AE9D9}" ShortID="746921404">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Interaction_confirmed" ID="{6398C7FD-A472-4A1F-B780-55D782CF5701}" WorkUnitID="{7C020226-B889-4780-83B7-B21F467A297F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Play_Door" ID="{8913F5A9-0410-49FF-A9D8-9C578D2D8A5C}">
 					<ChildrenList>
 						<Action Name="" ID="{5CC39932-ED78-482A-B40D-CAD3CBDCE38B}" ShortID="703261864">
@@ -151,6 +201,68 @@
 									<ObjectRef Name="Radio_Freq" ID="{B57BDAC5-62F8-4A71-8105-88B51B08FF9C}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
 								</Reference>
 							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_FlipRoom" ID="{E92C83A0-9640-4CCD-8C60-3C126F986230}">
+					<ChildrenList>
+						<Action Name="" ID="{C41E34C3-38C6-4184-B859-FEBC6B53E77A}" ShortID="715000415">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Flip_stop" ID="{9518E42D-E9F6-49B2-B453-30580EE11833}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8D43669E-6AD0-4C86-AFF5-133D3658753C}" ShortID="975675322">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Flip_loop" ID="{C6860CDA-56BE-48A5-B191-9EF9537D6931}" WorkUnitID="{B3A6ED57-3E75-4606-ADB6-F6792FE7DB24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Radio" ID="{11427EF8-9AEF-48CB-ACE7-66EBBB972FFB}">
+					<ChildrenList>
+						<Action Name="" ID="{6DF60EB2-040B-4413-B491-BD95295A65B5}" ShortID="236558187">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DrumBass" ID="{6F4DA038-4BD2-43E6-B56E-0BB31CED369A}" WorkUnitID="{61C748EF-DF38-46D4-B3CA-2BE456EF7D22}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{43BCEEF3-C9A6-4200-8EED-857B2CC23A21}" ShortID="1013904654">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MeloKey" ID="{6FDD4182-C627-4AE5-8169-9367727E5FC0}" WorkUnitID="{61C748EF-DF38-46D4-B3CA-2BE456EF7D22}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_All" ID="{E5909F34-EAEA-4937-8DF0-015E24AFCB7A}">
+					<ChildrenList>
+						<Action Name="" ID="{4B669AF0-5F67-46ED-9182-7574986ED260}" ShortID="492607172">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
 						</Action>
 					</ChildrenList>
 				</Event>

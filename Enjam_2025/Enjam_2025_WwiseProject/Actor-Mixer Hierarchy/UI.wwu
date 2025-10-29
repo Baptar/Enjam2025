@@ -6,6 +6,30 @@
 				<Property Name="Color" Type="int16" Value="20"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
+			<ChildrenList>
+				<Sound Name="Interaction_confirmed" ID="{6398C7FD-A472-4A1F-B780-55D782CF5701}" ShortID="908585859">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="clic_interact" ID="{91B7AD8C-0724-4475-AC80-F3C3DF94A81A}">
+							<Language>SFX</Language>
+							<AudioFile>clic_interact.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="517109579"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="clic_interact" ID="{91B7AD8C-0724-4475-AC80-F3C3DF94A81A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
