@@ -5,6 +5,8 @@ public class CorridorGenerated : MonoBehaviour
 {
     [SerializeField] private DoorComponent firstDoorOfCoridor;
     [SerializeField] private bool isFirstCoridor = false;
+    [HideInInspector] public GameObject previousCorridor;
+    public GameObject lastSpawnPointNEXT;
 
 
     private void Start()
@@ -21,5 +23,15 @@ public class CorridorGenerated : MonoBehaviour
         
         
         firstDoorOfCoridor.OpenDoor(this);
+    }
+
+    // used for infinity logic, corridor number 4
+    public void RemovePreviousCorridor()
+    {
+        if (previousCorridor != null)
+        {
+            Destroy(previousCorridor);
+            previousCorridor = null;
+        }
     }
 }

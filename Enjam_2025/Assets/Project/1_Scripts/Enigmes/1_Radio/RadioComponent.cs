@@ -4,19 +4,11 @@ using UnityEngine;
 [RequireComponent(typeof(Outline))]
 public class RadioComponent : MonoBehaviour, IInteractable
 {
-    public enum E_RadioState
-    {
-        First,
-        Second,
-        Third,
-    }
-    
     [Header("Parameters")]
     [SerializeField] private bool isInteractable = false;
 
     [Space(10)]
     [Header("References")]
-    [SerializeField] private Camera playerCam;
     [SerializeField] private Transform radioInspectPosition;
     [SerializeField] private GameObject indicatorGO;
     [SerializeField] private Transform[] channelsPosition;
@@ -26,6 +18,7 @@ public class RadioComponent : MonoBehaviour, IInteractable
     public E_RadioState actualRadio = E_RadioState.First;
     public E_RadioState solutionRadio;
     
+    private Camera playerCam;
     private Outline outline;
     private bool isInspectingRadio = false;
     private Vector3 originalCamPos;
@@ -35,15 +28,15 @@ public class RadioComponent : MonoBehaviour, IInteractable
     void Start()
     {
         outline = GetComponent<Outline>();
+        playerCam = PlayerController.instance.playerCamera;
         outline.enabled = false;
-        InitRandomSolution();
     }
 
     private void Update()
     {
         if (isInspectingRadio)
         {
-            if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 ChangeBeforeChannel();
             }
@@ -55,8 +48,9 @@ public class RadioComponent : MonoBehaviour, IInteractable
         }
     }
     
-    private void InitRandomSolution() => solutionRadio = (E_RadioState)Random.Range(0,3);
-    
+    /// <summary>
+    /// Interface Functions
+    /// </summary>
     public bool GetIsInteractable() => isInteractable;
 
     public void SetIsInteractable(bool value) => isInteractable = value;
@@ -75,17 +69,20 @@ public class RadioComponent : MonoBehaviour, IInteractable
 
     public void OnHovered(PlayerInteractor interactor)
     {
-        if (GetIsInteractable())
+        if (GetIsInteractable() && !isInspectingRadio)
             outline.enabled = true;
     }
 
     public void OnReleased() => outline.enabled = false;
-
+    
+    
+    /// <summary>
+    /// FUNCTIONS
+    /// </summary>
     private void ZoomOnRadio()
     {
-        SetIsInteractable(false);
-        outline.enabled = false;
         isInspectingRadio = true;
+        outline.enabled = false;
         PlayerController.instance.isInspectingRadio = true;
         originalCamPos = playerCam.transform.position;
         originalCamRot = playerCam.transform.rotation;
@@ -99,33 +96,51 @@ public class RadioComponent : MonoBehaviour, IInteractable
     {
         isInspectingRadio = false;
         PlayerController.instance.isInspectingRadio = false;
-        Sequence seq = DOTween.Sequence();
-        seq.Append(playerCam.transform.DOMove(originalCamPos, 3.0f).SetEase(Ease.InOutFlash))
-            .Insert(0.0f, playerCam.transform.DORotate(originalCamRot.eulerAngles, 3.0f).SetEase(Ease.InOutFlash))
-            .OnComplete(()=>{SetIsInteractable(true);});
+        /*Sequence seq = DOTween.Sequence();
+        seq.Append(playerCam.transform.DOMove(originalCamPos, 0.5f).SetEase(Ease.InOutFlash))
+            .Insert(0.0f, playerCam.transform.DORotate(originalCamRot.eulerAngles, 0.5f).SetEase(Ease.InOutFlash))
+            .Insert(0.7f, DOVirtual.DelayedCall(0, () =>
+            {
+                SetIsInteractable(true);
+            }));*/
     }
 
+    [ContextMenu("ChangeNextChannel")]
     private void ChangeNextChannel()
     {
-        
-        switch (actualRadio)
+        if (actualRadio == E_RadioState.Third) actualRadio = E_RadioState.First;
+        else actualRadio++;
+
+        indicatorGO.transform.DOMove(channelsPosition[(int)actualRadio].transform.position, 0.7f).SetEase(Ease.InOutFlash)
+            .OnComplete(()=>
         {
-            case E_RadioState.First:
-                    
-                break;
-            
-            case E_RadioState.Second:
-                
-                break;
-            
-            case E_RadioState.Third:
-                
-                break;
-        }
+            if (actualRadio == solutionRadio)
+            {
+                // WWISE good sound
+            }
+            else
+            {
+                // WWISE bad sound
+            }
+        });
     }
 
     private void ChangeBeforeChannel()
     {
-        
+        if (actualRadio == E_RadioState.First) actualRadio = E_RadioState.Third;
+        else actualRadio--;
+
+        indicatorGO.transform.DOMove(channelsPosition[(int)actualRadio].transform.position, 0.7f).SetEase(Ease.InOutFlash)
+            .OnComplete(()=>
+        {
+            if (actualRadio == solutionRadio)
+            {
+                // WWISE good sound
+            }
+            else
+            {
+                // WWISE bad sound
+            }
+        });
     }
 }

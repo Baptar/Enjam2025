@@ -442,3 +442,10 @@ MonoBehaviour:
   isInteractable: 0
   playerCam: {fileID: 0}
   radioInspectPosition: {fileID: 6235639059760876486}
+  indicatorGO: {fileID: 7963592624797187580}
+  channelsPosition:
+  - {fileID: 4525883313827595774}
+  - {fileID: 2416536381801437594}
+  - {fileID: 2876455681144936733}
+  actualRadio: 0
+  solutionRadio: 0

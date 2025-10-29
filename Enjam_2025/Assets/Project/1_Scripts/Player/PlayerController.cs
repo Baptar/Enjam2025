@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     [Space(10)]
     [Header("Camera")]
+    public Camera playerCamera;
     public Transform cameraTransform;
     public float mouseSensitivity = 80f;
     public float cameraSmooth = 8f;
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour
     public float bobAmplitude = 0.05f;
     public float bobRunMultiplier = 1.6f;
     public float bobSmooth = 8f;
-
+    
     // private variables
     private CharacterController controller;
     private Vector3 playerVelocity;

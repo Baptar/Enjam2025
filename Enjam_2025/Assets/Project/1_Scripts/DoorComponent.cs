@@ -7,10 +7,11 @@ using UnityEngine;
 public class DoorComponent : MonoBehaviour, IInteractable
 {
     [Header("Settings")]
-    [SerializeField] private int doorIDLinked;
+    public int doorIDLinked;
+    public int doorNumber;
+    [SerializeField] private bool randomNumberDoor;
     [SerializeField] private Transform corridorTransform;
     [SerializeField] private bool isInteractable;
-    [SerializeField] private int doorNumber;
     [SerializeField] private bool initDoorNumberAtStart = true;
     [SerializeField] private bool makeItDisappearAfterOpen = false;
     
@@ -28,20 +29,40 @@ public class DoorComponent : MonoBehaviour, IInteractable
     [SerializeField] private GameObject moveTarget;
     
     private Outline outline;
+    private bool inZone = false;
     private float startRotateValue;
     
     private void Start()
     {
         outline = GetComponent<Outline>();
         startRotateValue = gameObject.transform.localEulerAngles.y;
+        
+        if (randomNumberDoor) doorNumber = UnityEngine.Random.Range(0, 99);
         if (initDoorNumberAtStart) doorNumberText.text = doorNumber.ToString();
     }
     
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            inZone = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            inZone = false;
+            outline.enabled = false;
+        }
+    }
+
 
     /// <summary>
     /// Interface Functions
     /// </summary>
-    public bool GetIsInteractable() => isInteractable;
+    public bool GetIsInteractable() => isInteractable && inZone;
 
     public void SetIsInteractable(bool value) => isInteractable = value;
     
@@ -91,8 +112,21 @@ public class DoorComponent : MonoBehaviour, IInteractable
             Debug.Log("Corridor associated with doorIDLinked = " + doorIDLinked + " not found");
             return null;
         }
+
+        if (doorIDLinked == 4)
+        {
+            InfinitySystem[] all = FindObjectsOfType<InfinitySystem>();
+            foreach (InfinitySystem i in all)
+                Destroy(i.gameObject, 3.0f);
+        }
+        GameObject go = Instantiate(corridorGo, corridorTransform.position, corridorTransform.rotation);
+        if (go == null) return null;
+        if (go.TryGetComponent(out InfinitySystem infinitySystem))
+        {
+            infinitySystem.Spawn5Corridors(go);
+        }
         
-        return Instantiate(corridorGo, corridorTransform.position, corridorTransform.rotation);
+        return go;
     }
 
     public void OpenDoor(CorridorGenerated corridorGenerated)
@@ -144,7 +178,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
                         new Vector3(gameObject.transform.localEulerAngles.x, startRotateValue,
                             gameObject.transform.localEulerAngles.z), durationRotate).SetEase(Ease.InOutFlash))
             // manage corridor Data
-            .Append(DOVirtual.DelayedCall(0, () =>
+            .Insert(1.9f, DOVirtual.DelayedCall(0, () =>
             {
                 CorridorsManager.instance.RemovePreviousCorridor();
                 CorridorsManager.instance.SetPreviousCorridor(corridorGenerated.gameObject);

@@ -768,6 +768,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstDoorOfCoridor: {fileID: 6808010766010299024}
   isFirstCoridor: 0
+  previousCorridor: {fileID: 0}
+  lastSpawnPointNEXT: {fileID: 0}
 --- !u!1 &6350819487759921366
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,12 +2453,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 3351902214748233650}
     m_Modifications:
     - target: {fileID: 6015378479571038530, guid: 085c4af015e5bad478c137b4e2ae3f34, type: 3}
+      propertyPath: doorIDLinked
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015378479571038530, guid: 085c4af015e5bad478c137b4e2ae3f34, type: 3}
       propertyPath: instantiateAtStart
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6015378479571038530, guid: 085c4af015e5bad478c137b4e2ae3f34, type: 3}
       propertyPath: makeItDisappearAfterOpen
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6890997100478574641, guid: 085c4af015e5bad478c137b4e2ae3f34, type: 3}
       propertyPath: m_Name
@@ -5267,6 +5273,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3351902214748233650}
     m_Modifications:
+    - target: {fileID: 6015378479571038530, guid: 085c4af015e5bad478c137b4e2ae3f34, type: 3}
+      propertyPath: doorIDLinked
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015378479571038530, guid: 085c4af015e5bad478c137b4e2ae3f34, type: 3}
+      propertyPath: isInteractable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6015378479571038530, guid: 085c4af015e5bad478c137b4e2ae3f34, type: 3}
       propertyPath: instantiateAtStart
       value: 0
