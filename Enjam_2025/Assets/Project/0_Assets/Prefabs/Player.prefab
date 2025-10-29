@@ -357,11 +357,13 @@ MonoBehaviour:
   runSpeed: 7
   acceleration: 10
   gravity: -3
+  playerCamera: {fileID: 6022836883325830313}
   cameraTransform: {fileID: 4071158601859884516}
   mouseSensitivity: 100
   cameraSmooth: 10
   maxLookAngle: 85
   blockCamera: 0
+  isInspectingRadio: 0
   bobFrequency: 2.8
   bobAmplitude: 0.06
   bobRunMultiplier: 1

@@ -1,25 +1,37 @@
 using System;
 using UnityEngine;
 
-public class CoridorGenerated : MonoBehaviour
+public class CorridorGenerated : MonoBehaviour
 {
     [SerializeField] private DoorComponent firstDoorOfCoridor;
     [SerializeField] private bool isFirstCoridor = false;
+    [HideInInspector] public GameObject previousCorridor;
+    public GameObject lastSpawnPointNEXT;
 
 
     private void Start()
     {
-        if (isFirstCoridor) DoorsManager.instance.SetPreviousCoridor(gameObject);
+        if (isFirstCoridor) CorridorsManager.instance.SetPreviousCorridor(gameObject);
     }
     
-    public void OnCoridorGenerated(int doorNumber)
+    public void OnCorridorGenerated(int doorNumber, bool displayOnNewDoorNumber)
     {
-        firstDoorOfCoridor.SetDoorNumberBehind(doorNumber);
+        if (displayOnNewDoorNumber) firstDoorOfCoridor.SetDoorNumberBehind(doorNumber);
             
         //set the door that is opening to not interactable
         firstDoorOfCoridor.SetIsInteractable(false);
         
         
         firstDoorOfCoridor.OpenDoor(this);
+    }
+
+    // used for infinity logic, corridor number 4
+    public void RemovePreviousCorridor()
+    {
+        if (previousCorridor != null)
+        {
+            Destroy(previousCorridor);
+            previousCorridor = null;
+        }
     }
 }

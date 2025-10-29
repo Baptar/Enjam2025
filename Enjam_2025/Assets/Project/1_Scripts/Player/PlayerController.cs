@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -13,11 +14,13 @@ public class PlayerController : MonoBehaviour
 
     [Space(10)]
     [Header("Camera")]
+    public Camera playerCamera;
     public Transform cameraTransform;
     public float mouseSensitivity = 80f;
     public float cameraSmooth = 8f;
     public float maxLookAngle = 85f;
     public bool blockCamera = false;
+    public bool isInspectingRadio = false;
 
     [Space(10)]
     [Header("Head Bobbing")]
@@ -25,7 +28,7 @@ public class PlayerController : MonoBehaviour
     public float bobAmplitude = 0.05f;
     public float bobRunMultiplier = 1.6f;
     public float bobSmooth = 8f;
-
+    
     // private variables
     private CharacterController controller;
     private Vector3 playerVelocity;
@@ -54,9 +57,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!blockCamera) HandleLook();
-        HandleMovement();
-        HandleHeadBob();
+        if (!blockCamera && !isInspectingRadio) HandleLook();
+        if (!isInspectingRadio) HandleMovement();
+        if (!isInspectingRadio) HandleHeadBob();
     }
 
     void HandleLook()
@@ -103,6 +106,12 @@ public class PlayerController : MonoBehaviour
             playerVelocity.y += gravity * Time.deltaTime;
 
         controller.Move(playerVelocity * Time.deltaTime);
+        
+        // --- Footstep logic ---
+        bool currentlyMoving = controller.isGrounded && currentMove.magnitude > 0.1f;
+    
+        if (currentlyMoving) AudioManager.instance.PlaySoundFootStep();
+        else AudioManager.instance.StopPlaySoundFootStep();
     }
 
     void HandleHeadBob()
