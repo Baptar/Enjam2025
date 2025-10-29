@@ -75,7 +75,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DefaultSwitchOrState">
-											<ObjectRef Name="Noise" ID="{ED96374B-70B3-4BA7-95B3-AA506F5DD154}" WorkUnitID="{182B4A68-F6DF-4D91-BB9C-3E2B2F651BC8}"/>
+											<ObjectRef Name="Noise" ID="{22673DD2-6C92-4762-9782-C0C052B0BDC2}" WorkUnitID="{182B4A68-F6DF-4D91-BB9C-3E2B2F651BC8}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
@@ -288,7 +288,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DefaultSwitchOrState">
-											<ObjectRef Name="Sound" ID="{AEA67108-1AC0-461B-A57A-DC6A828DB332}" WorkUnitID="{182B4A68-F6DF-4D91-BB9C-3E2B2F651BC8}"/>
+											<ObjectRef Name="Noise" ID="{22673DD2-6C92-4762-9782-C0C052B0BDC2}" WorkUnitID="{182B4A68-F6DF-4D91-BB9C-3E2B2F651BC8}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>

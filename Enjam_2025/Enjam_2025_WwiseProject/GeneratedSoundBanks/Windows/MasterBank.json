@@ -10,11 +10,51 @@
     "Type": "User",
     "GUID": "{E280E47F-0000-4F65-96CA-C63F8AAB9E42}",
     "Language": "SFX",
-    "Hash": "{A9F680AE-C199-9DB9-EBA0-96C639FF7A7E}",
+    "Hash": "{ACA6FD16-36A8-F0AB-CD07-22A791113409}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MasterBank",
     "ShortName": "MasterBank",
     "Path": "MasterBank.bnk",
     "Media": [
+     {
+      "Id": "39127054",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Radio_Change_Freq 1.wav",
+      "CachePath": "5F/{5F3196AE-3A74-95BB-5535-2CA9C99C540E}.wem"
+     },
+     {
+      "Id": "69420378",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Lamp_glitch 4.wav",
+      "CachePath": "B1/{B191A8CF-C8AE-AF25-BCD2-2E6B98F40658}.wem"
+     },
+     {
+      "Id": "72288784",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Lamp_glitch 5.wav",
+      "CachePath": "14/{14863F1C-582E-1E93-308A-A4EBF75D8815}.wem"
+     },
+     {
+      "Id": "108799498",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RoomFlip_stop.wav",
+      "CachePath": "23/{23DE1F49-C651-6E8F-684A-31E3447F4F82}.wem"
+     },
+     {
+      "Id": "112079929",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Roomtone_Addd_001.wav",
+      "CachePath": "62/{62AA4150-F771-5580-6433-563BD2247522}.wem"
+     },
      {
       "Id": "134914292",
       "Language": "SFX",
@@ -22,6 +62,22 @@
       "Location": "Memory",
       "ShortName": "FS_Player_010.wav",
       "CachePath": "7C/{7C59262D-9F13-51EE-5F19-F9763311BC6C}.wem"
+     },
+     {
+      "Id": "135653186",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Roomtone_Add_003.wav",
+      "CachePath": "2A/{2A8097E8-A729-E53F-F39F-7B7404F4A93F}.wem"
+     },
+     {
+      "Id": "144933518",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Radio_Change_Freq 5.wav",
+      "CachePath": "EE/{EE7C442A-D5F9-5493-41C4-DC188402B62E}.wem"
      },
      {
       "Id": "154736014",
@@ -48,6 +104,22 @@
       "CachePath": "65/{6512EDC2-1515-C515-8671-1ADC1D99A5D9}.wem"
      },
      {
+      "Id": "206467573",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Roomtone_Add_004.wav",
+      "CachePath": "6D/{6DBA860F-F170-7CB1-1C5E-930830F4A8B9}.wem"
+     },
+     {
+      "Id": "223324414",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RoomFlip_start.wav",
+      "CachePath": "90/{9099DCA9-6FC9-6237-18F3-23D92FAE7362}.wem"
+     },
+     {
       "Id": "241190790",
       "Language": "SFX",
       "Streaming": "false",
@@ -72,12 +144,37 @@
       "CachePath": "01/{01B7BC72-0F81-2F66-2848-0C110191C4A5}.wem"
      },
      {
+      "Id": "243040784",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "RoomFlip_Loop.wav",
+      "Path": "Media/243040784.wem",
+      "CachePath": "7C/{7C6F5D9A-720F-021E-1587-620EFA45A5F8}.wem"
+     },
+     {
+      "Id": "260537508",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Tableau_Flip_1.wav",
+      "CachePath": "57/{57C49BC4-E065-A424-88A5-66DE130FB521}.wem"
+     },
+     {
       "Id": "262950728",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Puzzle_Knock_005.wav",
       "CachePath": "84/{84556E5D-7645-D92D-DFB1-C7FFBC855301}.wem"
+     },
+     {
+      "Id": "286733391",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Roomtone_Addd_003.wav",
+      "CachePath": "5C/{5CF9584D-542B-8957-09F2-594C109F73D4}.wem"
      },
      {
       "Id": "340908469",
@@ -96,6 +193,22 @@
       "CachePath": "27/{2771C4AB-AF9F-448C-EB98-9E5844DFA2D1}.wem"
      },
      {
+      "Id": "386670208",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Roomtone_Add_005.wav",
+      "CachePath": "AE/{AE35CD6C-49E2-18DC-0C3E-EA41A8E1B28B}.wem"
+     },
+     {
+      "Id": "426284311",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Lamp_glitch 1.wav",
+      "CachePath": "6B/{6B6AEA71-6159-3DFB-8903-E6FCBA3F6A46}.wem"
+     },
+     {
       "Id": "441395536",
       "Language": "SFX",
       "Streaming": "false",
@@ -112,12 +225,36 @@
       "CachePath": "A5/{A5D482FE-FD27-E9D3-6FA9-95303C3455AC}.wem"
      },
      {
+      "Id": "456448666",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Radio_Change_Freq 3.wav",
+      "CachePath": "28/{28219273-821F-0629-4DBC-F37B5E6861A0}.wem"
+     },
+     {
       "Id": "491981291",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Puzzle_Knock_001.wav",
       "CachePath": "11/{1129ECEB-2DC7-23B2-4404-80B0F6C6ED0C}.wem"
+     },
+     {
+      "Id": "507806867",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Roomtone_Addd_002.wav",
+      "CachePath": "9A/{9AF3ADC7-81D2-C199-6724-BE9F5365F87B}.wem"
+     },
+     {
+      "Id": "509163793",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Lamp_glitch 6.wav",
+      "CachePath": "1B/{1BE2BF01-4067-7974-EBE2-0C18EE60B482}.wem"
      },
      {
       "Id": "514490211",
@@ -128,12 +265,36 @@
       "CachePath": "94/{94600151-9DF7-5A96-C848-B9AC1E704E0E}.wem"
      },
      {
+      "Id": "517109579",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "clic_interact.wav",
+      "CachePath": "E7/{E7AF07A1-41E0-A284-93F5-C271C81614BB}.wem"
+     },
+     {
       "Id": "539969696",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Puzzle_Knock_007.wav",
       "CachePath": "A0/{A00F00D3-8F8F-1C7C-15B7-653CD9339A87}.wem"
+     },
+     {
+      "Id": "543886945",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Lamp_glitch 3.wav",
+      "CachePath": "D3/{D388D1C6-B2C7-4AF5-6AB0-DEED78529B08}.wem"
+     },
+     {
+      "Id": "608174705",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Radio_Change_Freq 4.wav",
+      "CachePath": "7E/{7E369081-E5BA-399B-6EF7-D0A7440B7213}.wem"
      },
      {
       "Id": "611832412",
@@ -150,6 +311,22 @@
       "Location": "Memory",
       "ShortName": "Puzzle_Knock_008.wav",
       "CachePath": "87/{8760F836-FF90-5483-2F4E-C0BAF9B83BE5}.wem"
+     },
+     {
+      "Id": "685682248",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Radio_Change_Freq 2.wav",
+      "CachePath": "79/{79B34CBE-3ACA-D52E-F790-8E3CB05FFAB8}.wem"
+     },
+     {
+      "Id": "686578801",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Tableau_Flip_2.wav",
+      "CachePath": "61/{61508499-BE6E-BD91-C32F-C9BA258334EE}.wem"
      },
      {
       "Id": "701466135",
@@ -192,6 +369,22 @@
       "CachePath": "CE/{CEA3EF00-7E26-9008-5ABF-C37417467AD3}.wem"
      },
      {
+      "Id": "792798736",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Roomtone.wav",
+      "CachePath": "5E/{5E0C94BD-F9FF-FB63-416E-849FB8B144C2}.wem"
+     },
+     {
+      "Id": "909109343",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Roomtone_Add_001.wav",
+      "CachePath": "AD/{ADFF1687-5FAA-0A8C-FD50-74E7E7E74248}.wem"
+     },
+     {
       "Id": "929031819",
       "Language": "SFX",
       "Streaming": "false",
@@ -206,6 +399,14 @@
       "Location": "Memory",
       "ShortName": "RadioMusic_low_FXED.wav",
       "CachePath": "7E/{7E14637B-DF17-ADAD-C257-2FC3CE2C8327}.wem"
+     },
+     {
+      "Id": "949110747",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Roomtone_Add_002.wav",
+      "CachePath": "CC/{CCBC2EB2-E587-8B7C-BBD4-476FF9EC1B78}.wem"
      },
      {
       "Id": "953053005",
@@ -230,14 +431,70 @@
       "Location": "Memory",
       "ShortName": "Puzzle_Knock_002.wav",
       "CachePath": "69/{692AD1F4-14CD-CC7B-AE4C-6B0D75F3202D}.wem"
+     },
+     {
+      "Id": "1030913460",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Roomtone_Addd_004.wav",
+      "CachePath": "C6/{C62F4FBB-4245-1EF2-F9E7-30681A004FC2}.wem"
+     },
+     {
+      "Id": "1066385717",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Lamp_glitch 2.wav",
+      "CachePath": "FD/{FD342DF1-F7FE-5768-B24D-5D8D09A1EC1C}.wem"
      }
     ],
     "Events": [
+     {
+      "Id": "2959533290",
+      "Name": "Play_AMB",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_AMB",
+      "GUID": "{FAD75230-8606-475E-9E00-FFCF32CD615B}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "112079929"
+       },
+       {
+        "Id": "135653186"
+       },
+       {
+        "Id": "206467573"
+       },
+       {
+        "Id": "286733391"
+       },
+       {
+        "Id": "386670208"
+       },
+       {
+        "Id": "507806867"
+       },
+       {
+        "Id": "792798736"
+       },
+       {
+        "Id": "909109343"
+       },
+       {
+        "Id": "949110747"
+       },
+       {
+        "Id": "1030913460"
+       }
+      ]
+     },
      {
       "Id": "2547633870",
       "Name": "Play_Door",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Door",
       "GUID": "{8913F5A9-0410-49FF-A9D8-9C578D2D8A5C}",
+      "MaxAttenuation": "3",
       "DurationType": "OneShot",
       "DurationMin": "6.723104",
       "DurationMax": "6.723104",
@@ -258,10 +515,15 @@
       "Name": "Play_FlipRoom",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_FlipRoom",
       "GUID": "{79DFAC85-46CE-4D99-A930-C0B5B51E6AF3}",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "223324414"
+       },
+       {
+        "Id": "243040784"
+       }
+      ]
      },
      {
       "Id": "1413020905",
@@ -307,20 +569,58 @@
       "Name": "Play_Interact",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Interact",
       "GUID": "{AA50CA6A-73B9-4EA3-9CA1-46598CF9AAF0}",
-      "MaxAttenuation": "0",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.37735417",
+      "DurationMax": "0.37735417",
+      "MediaRefs": [
+       {
+        "Id": "517109579"
+       }
+      ]
+     },
+     {
+      "Id": "227546076",
+      "Name": "Play_Interact_Radio",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Interact_Radio",
+      "GUID": "{6BBA6F00-4162-4800-9DC4-99C7DB4EAC5E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.2096875",
+      "DurationMax": "0.2096875",
+      "MediaRefs": [
+       {
+        "Id": "39127054"
+       },
+       {
+        "Id": "144933518"
+       },
+       {
+        "Id": "456448666"
+       },
+       {
+        "Id": "608174705"
+       },
+       {
+        "Id": "685682248"
+       }
+      ]
      },
      {
       "Id": "2755497438",
       "Name": "Play_InteractPicture",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_InteractPicture",
       "GUID": "{B3537EDF-AE47-4911-91E0-B0535F42827A}",
-      "MaxAttenuation": "0",
+      "MaxAttenuation": "3",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "0.7137097",
+      "DurationMax": "0.79826176",
+      "MediaRefs": [
+       {
+        "Id": "260537508"
+       },
+       {
+        "Id": "686578801"
+       }
+      ]
      },
      {
       "Id": "2953849999",
@@ -386,16 +686,70 @@
       "Name": "Play_SFX_Light",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_SFX_Light",
       "GUID": "{7894A09F-08C3-49A0-A428-52B7F22FF96E}",
+      "MaxAttenuation": "3",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9097083",
+      "DurationMax": "0.9097083",
+      "MediaRefs": [
+       {
+        "Id": "69420378"
+       },
+       {
+        "Id": "72288784"
+       },
+       {
+        "Id": "426284311"
+       },
+       {
+        "Id": "509163793"
+       },
+       {
+        "Id": "543886945"
+       },
+       {
+        "Id": "1066385717"
+       }
+      ]
+     },
+     {
+      "Id": "452547817",
+      "Name": "Stop_All",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_All",
+      "GUID": "{E5909F34-EAEA-4937-8DF0-015E24AFCB7A}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
      },
      {
+      "Id": "3097110780",
+      "Name": "Stop_FlipRoom",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_FlipRoom",
+      "GUID": "{E92C83A0-9640-4CCD-8C60-3C126F986230}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.754271",
+      "DurationMax": "4.754271",
+      "MediaRefs": [
+       {
+        "Id": "108799498"
+       }
+      ]
+     },
+     {
       "Id": "173549051",
       "Name": "Stop_FS_Player",
       "ObjectPath": "\\Events\\Default Work Unit\\Stop_FS_Player",
       "GUID": "{317265A9-31F3-4665-B333-191FD016FAE3}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "151474297",
+      "Name": "Stop_Radio",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Radio",
+      "GUID": "{11427EF8-9AEF-48CB-ACE7-66EBBB972FFB}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
       "DurationMin": "0",
@@ -480,6 +834,6 @@
     ]
    }
   ],
-  "FileHash": "{C2C57689-6DA2-B80E-B73B-25AE93EC5AFC}"
+  "FileHash": "{C31FD452-082D-D56F-EBE7-DBF28549EA9D}"
  }
 }

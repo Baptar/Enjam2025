@@ -389,7 +389,14 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Door" ID="{2627AD00-5850-48D0-A9F9-D6D50E41B0B4}" ShortID="417731621">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Puzzle_Attenuation" ID="{FBDFA799-CE34-4C44-8323-EA35D9DF572B}" WorkUnitID="{64CD8246-47FC-4666-83DC-946C4A41B997}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
 								</Reference>
@@ -747,6 +754,333 @@
 									</Reference>
 								</ObjectList>
 							</ObjectLists>
+						</RandomSequenceContainer>
+						<ActorMixer Name="Flip_room" ID="{CA7857C4-3595-44A0-983B-8FBD613EFEF1}" ShortID="441041474">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Flip_start" ID="{3676E2DE-D78D-4C8B-82C3-3EE8123B1811}" ShortID="952830200">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RoomFlip_start" ID="{CFDEA656-61D2-414B-815F-9801AF8277E3}">
+											<Language>SFX</Language>
+											<AudioFile>RoomFlip_start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="223324414"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RoomFlip_start" ID="{CFDEA656-61D2-414B-815F-9801AF8277E3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Flip_loop" ID="{C6860CDA-56BE-48A5-B191-9EF9537D6931}" ShortID="373770444">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RoomFlip_Loop" ID="{17554B70-4751-4097-9A90-0DDD942A9444}">
+											<Language>SFX</Language>
+											<AudioFile>RoomFlip_Loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="243040784"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RoomFlip_Loop" ID="{17554B70-4751-4097-9A90-0DDD942A9444}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Flip_stop" ID="{9518E42D-E9F6-49B2-B453-30580EE11833}" ShortID="671349697">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="RoomFlip_stop" ID="{C4DAF89C-D576-42D1-BE83-DDF80C786972}">
+											<PropertyList>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>RoomFlip_stop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="108799498"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="RoomFlip_stop" ID="{C4DAF89C-D576-42D1-BE83-DDF80C786972}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+						<RandomSequenceContainer Name="Tik_Lamp" ID="{F44CBBED-7781-491B-A4B8-3EA9ECE27774}" ShortID="1069258432">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Puzzle_Attenuation" ID="{FBDFA799-CE34-4C44-8323-EA35D9DF572B}" WorkUnitID="{64CD8246-47FC-4666-83DC-946C4A41B997}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Lamp_glitch 1" ID="{6B55A1E2-5505-430D-9985-880595D9FE68}" ShortID="477063036">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lamp_glitch 1" ID="{62962942-FED6-48F1-B30F-C2DCF74FB1F1}">
+											<Language>SFX</Language>
+											<AudioFile>Lamp_glitch 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="426284311"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lamp_glitch 1" ID="{62962942-FED6-48F1-B30F-C2DCF74FB1F1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lamp_glitch 2" ID="{2E14B873-F27E-47CB-BA97-C815F355D2BD}" ShortID="1041181358">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lamp_glitch 2" ID="{1D379BA1-A1A3-4E63-A340-242CA22F8195}">
+											<Language>SFX</Language>
+											<AudioFile>Lamp_glitch 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1066385717"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lamp_glitch 2" ID="{1D379BA1-A1A3-4E63-A340-242CA22F8195}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lamp_glitch 3" ID="{A92182B7-39DE-4313-86F8-ED6FFCC13995}" ShortID="555311946">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lamp_glitch 3" ID="{B9696FB5-E1A8-49F3-87BE-65F6BD5DADA3}">
+											<Language>SFX</Language>
+											<AudioFile>Lamp_glitch 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="543886945"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lamp_glitch 3" ID="{B9696FB5-E1A8-49F3-87BE-65F6BD5DADA3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lamp_glitch 4" ID="{35198093-B2F8-48C6-8C01-AA54D9E97AD1}" ShortID="851461910">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lamp_glitch 4" ID="{7C596151-54D8-4BC3-B40F-724D39731A86}">
+											<Language>SFX</Language>
+											<AudioFile>Lamp_glitch 4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="69420378"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lamp_glitch 4" ID="{7C596151-54D8-4BC3-B40F-724D39731A86}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lamp_glitch 5" ID="{DBA28837-F470-4D72-B869-B70C92524ED5}" ShortID="191932728">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lamp_glitch 5" ID="{B9C80636-C2B9-40D6-B5E2-AD410528C4AF}">
+											<Language>SFX</Language>
+											<AudioFile>Lamp_glitch 5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="72288784"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lamp_glitch 5" ID="{B9C80636-C2B9-40D6-B5E2-AD410528C4AF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lamp_glitch 6" ID="{2A38C226-E72A-49C9-81EF-567E019014F6}" ShortID="760235642">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lamp_glitch 6" ID="{124C60ED-664C-400D-9325-399EC1516981}">
+											<Language>SFX</Language>
+											<AudioFile>Lamp_glitch 6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="509163793"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lamp_glitch 6" ID="{124C60ED-664C-400D-9325-399EC1516981}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Flip_Painting" ID="{23B9A4EF-DAB1-4217-9FC8-1FB9D745E4CC}" ShortID="290284327">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{66B87F3E-A608-4C1E-AFF8-0D76C39E1ADE}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="6"/>
+													<Property Name="Min" Type="Real64" Value="-6"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Puzzle_Attenuation" ID="{FBDFA799-CE34-4C44-8323-EA35D9DF572B}" WorkUnitID="{64CD8246-47FC-4666-83DC-946C4A41B997}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Tableau_Flip_1" ID="{B48B5D6D-DA4D-4295-918B-F8BF1AA56628}" ShortID="374269475">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Tableau_Flip_1" ID="{44D51F26-6817-43E5-ADD8-536385283CA9}">
+											<Language>SFX</Language>
+											<AudioFile>Tableau_Flip_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="260537508"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Tableau_Flip_1" ID="{44D51F26-6817-43E5-ADD8-536385283CA9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Tableau_Flip_2" ID="{F9983449-F23A-45DB-8EAD-0DA276F36E52}" ShortID="566454598">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Tableau_Flip_2" ID="{F4B75747-47A1-4DFD-B24A-65FA46814B1E}">
+											<Language>SFX</Language>
+											<AudioFile>Tableau_Flip_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="686578801"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Tableau_Flip_2" ID="{F4B75747-47A1-4DFD-B24A-65FA46814B1E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
