@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private float pitch;
     private Quaternion camTargetRot;
     private Quaternion bodyTargetRot;
+    private bool isMoving = false;
 
     private void Awake() => instance = this;
     
@@ -109,9 +110,17 @@ public class PlayerController : MonoBehaviour
         
         // --- Footstep logic ---
         bool currentlyMoving = controller.isGrounded && currentMove.magnitude > 0.1f;
-    
-        if (currentlyMoving) AudioManager.instance.PlaySoundFootStep();
-        else AudioManager.instance.StopPlaySoundFootStep();
+
+        if (currentlyMoving && !isMoving)
+        {
+            isMoving = true;
+            AudioManager.instance.PlaySoundFootStep();
+        }
+        else
+        {
+            AudioManager.instance.StopPlaySoundFootStep();
+            isMoving = false;
+        }
     }
 
     void HandleHeadBob()

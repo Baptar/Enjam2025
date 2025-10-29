@@ -21,14 +21,15 @@ public class AudioManager : MonoBehaviour
     
     private void Awake() => instance = this;
 
-    private void Start() => PlayAmbiance();
+    private void Start() {
+        PlayAmbiance();
+        PlayRadio();
+    }
 
     private void PlayAmbiance() => ambiance.Post(gameObject);
 
-    public void PlayRadio()
-    {
-        // je sais pas
-    }
+    private void PlayRadio() => radioEvent.Post(gameObject);
+  
 
     public void PlaySoundFootStep() => playing_FS_ID = footStepEvent.Post(gameObject);
 

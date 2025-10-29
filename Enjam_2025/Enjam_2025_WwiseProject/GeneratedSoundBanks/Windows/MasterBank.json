@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{E280E47F-0000-4F65-96CA-C63F8AAB9E42}",
     "Language": "SFX",
-    "Hash": "{9BBC4E1C-9168-3CF5-0961-29A7BA57CEF5}",
+    "Hash": "{ACA6FD16-36A8-F0AB-CD07-22A791113409}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MasterBank",
     "ShortName": "MasterBank",
     "Path": "MasterBank.bnk",
@@ -834,6 +834,6 @@
     ]
    }
   ],
-  "FileHash": "{170C0FA0-3538-2A9E-E85F-B218ECE1A6AF}"
+  "FileHash": "{C31FD452-082D-D56F-EBE7-DBF28549EA9D}"
  }
 }

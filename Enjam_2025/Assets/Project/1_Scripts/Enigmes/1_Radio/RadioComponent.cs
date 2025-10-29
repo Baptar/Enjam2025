@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Outline))]
@@ -88,8 +89,8 @@ public class RadioComponent : MonoBehaviour, IInteractable
         PlayerController.instance.isInspectingRadio = true;
         originalCamPos = playerCam.transform.position;
         originalCamRot = playerCam.transform.rotation;
-        
-        Sequence seq = DOTween.Sequence();
+
+        DG.Tweening.Sequence seq = DOTween.Sequence();
         seq.Append(playerCam.transform.DOMove(radioInspectPosition.position, 1.0f).SetEase(Ease.InOutFlash))
             .Insert(0.0f, playerCam.transform.DORotate(radioInspectPosition.eulerAngles, 1.0f).SetEase(Ease.InOutFlash));
     }
@@ -119,10 +120,15 @@ public class RadioComponent : MonoBehaviour, IInteractable
             if (actualRadio == solutionRadio)
             {
                 // WWISE good sound
+                AkUnitySoundEngine.SetState("Radio1", "Sound");
+                //AkUnitySoundEngine.SetState("Radio2", "Sound");
+
             }
             else
             {
                 // WWISE bad sound
+                AkUnitySoundEngine.SetState("Radio1", "Noise");
+                //AkUnitySoundEngine.SetState("Radio2", "Noise");
             }
         });
     }
@@ -138,10 +144,14 @@ public class RadioComponent : MonoBehaviour, IInteractable
             if (actualRadio == solutionRadio)
             {
                 // WWISE good sound
+                AkUnitySoundEngine.SetState("Radio1", "Sound");
+                //AkUnitySoundEngine.SetState("Radio2", "Sound");
             }
             else
             {
                 // WWISE bad sound
+                AkUnitySoundEngine.SetState("Radio1", "Noise");
+                //AkUnitySoundEngine.SetState("Radio2", "Noise");
             }
         });
     }
