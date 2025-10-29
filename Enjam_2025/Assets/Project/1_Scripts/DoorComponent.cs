@@ -38,7 +38,12 @@ public class DoorComponent : MonoBehaviour, IInteractable
         startRotateValue = gameObject.transform.localEulerAngles.y;
         
         if (randomNumberDoor) doorNumber = UnityEngine.Random.Range(0, 99);
-        if (initDoorNumberAtStart) doorNumberText.text = doorNumber.ToString();
+        if (initDoorNumberAtStart) InitTextDoorWithNumber();
+    }
+
+    public void InitTextDoorWithNumber()
+    {
+        doorNumberText.text = doorNumber.ToString();
     }
     
     private void OnTriggerEnter(Collider other)
@@ -86,6 +91,8 @@ public class DoorComponent : MonoBehaviour, IInteractable
     /// </summary>
     private void OnInteract()
     {
+        AudioManager.instance.PlaySoundInteract();
+        
         // can't interact with anymore
         SetIsInteractable(false);
         
@@ -100,7 +107,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
         
         if (corridor.TryGetComponent(out CorridorGenerated corridorGenerated))
         {
-            corridorGenerated.OnCorridorGenerated(doorNumber);
+            corridorGenerated.OnCorridorGenerated(doorNumber, doorIDLinked != 4);
         }
     }
     
@@ -119,7 +126,11 @@ public class DoorComponent : MonoBehaviour, IInteractable
             foreach (InfinitySystem i in all)
                 Destroy(i.gameObject, 3.0f);
         }
-        GameObject go = Instantiate(corridorGo, corridorTransform.position, corridorTransform.rotation);
+        
+        Vector3 rot = corridorTransform.rotation.eulerAngles;
+        rot.z = 0;
+        
+        GameObject go = Instantiate(corridorGo, corridorTransform.position, Quaternion.Euler(rot));
         if (go == null) return null;
         if (go.TryGetComponent(out InfinitySystem infinitySystem))
         {
@@ -151,6 +162,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
             .SetEase(rotationEase);
         
 
+        AudioManager.instance.PlaySoundDoorOpen();
         Sequence seq = DOTween.Sequence();
         // open door
         seq.Append(gameObject.transform.DOLocalRotate(new Vector3(gameObject.transform.localEulerAngles.x, newRotateValue, gameObject.transform.localEulerAngles.z), durationRotate).SetEase(Ease.InOutFlash));

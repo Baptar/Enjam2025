@@ -6,6 +6,300 @@
 				<Property Name="Color" Type="int16" Value="4"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="AMB" ID="{6D54017B-04D0-4A4E-B0D5-E699D001AAC9}" ShortID="405048514">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="AMB" ID="{4019B0FF-D77E-4503-9128-566646D387DC}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Roomtone" ID="{1590DFE1-3F1F-4142-BDAA-3674B6C81222}" ShortID="260484814">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Roomtone" ID="{5BC9B437-DB21-4703-85B0-E9EB3C74B99B}">
+									<Language>SFX</Language>
+									<AudioFile>Roomtone.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="792798736"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Roomtone" ID="{5BC9B437-DB21-4703-85B0-E9EB3C74B99B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Random_Add" ID="{34D9765A-2844-4226-8CFC-6FF51AFEF9DC}" ShortID="979396234">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="10">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{458FDE48-3CBD-490B-B147-56369E411E39}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Roomtone_Add_001" ID="{EC84C1AE-F0F7-4745-B8E2-447AB63B24DF}" ShortID="263772009">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AMB" ID="{4019B0FF-D77E-4503-9128-566646D387DC}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Roomtone_Add_001" ID="{71930875-9565-44BC-AD95-EA1331094C73}">
+											<Language>SFX</Language>
+											<AudioFile>Roomtone_Add_001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="909109343"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Roomtone_Add_001" ID="{71930875-9565-44BC-AD95-EA1331094C73}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Roomtone_Add_002" ID="{1FF4B7C2-F188-49A8-A3A1-2C69862ECB80}" ShortID="26369272">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AMB" ID="{4019B0FF-D77E-4503-9128-566646D387DC}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Roomtone_Add_002" ID="{1A06BF87-08BF-44C8-B32B-D1359D16386A}">
+											<Language>SFX</Language>
+											<AudioFile>Roomtone_Add_002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="949110747"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Roomtone_Add_002" ID="{1A06BF87-08BF-44C8-B32B-D1359D16386A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Roomtone_Add_003" ID="{F5284A72-FD08-4011-A345-C97FED3DC163}" ShortID="208290502">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AMB" ID="{4019B0FF-D77E-4503-9128-566646D387DC}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Roomtone_Add_003" ID="{10B5F292-6E28-4E11-81E7-E446614DB2B8}">
+											<Language>SFX</Language>
+											<AudioFile>Roomtone_Add_003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="135653186"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Roomtone_Add_003" ID="{10B5F292-6E28-4E11-81E7-E446614DB2B8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Roomtone_Add_004" ID="{3F654903-11E9-4B5D-BF30-D99C2D51B3C5}" ShortID="221502865">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AMB" ID="{4019B0FF-D77E-4503-9128-566646D387DC}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Roomtone_Add_004" ID="{489A934F-60AD-4CDE-9E92-5A3E64580F79}">
+											<Language>SFX</Language>
+											<AudioFile>Roomtone_Add_004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="206467573"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Roomtone_Add_004" ID="{489A934F-60AD-4CDE-9E92-5A3E64580F79}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Roomtone_Add_005" ID="{B6CFCF2B-C88F-48FD-9794-742D81549030}" ShortID="562033071">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AMB" ID="{4019B0FF-D77E-4503-9128-566646D387DC}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Roomtone_Add_005" ID="{E93C3C14-10A0-412F-9385-66F281522081}">
+											<Language>SFX</Language>
+											<AudioFile>Roomtone_Add_005.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="386670208"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Roomtone_Add_005" ID="{E93C3C14-10A0-412F-9385-66F281522081}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Random_Addd" ID="{89089E21-0369-4053-8CEB-589DD29A611D}" ShortID="703674231">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="10">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{195C3B84-B5BB-4AD6-801F-2E470CDEDF22}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Roomtone_Addd_001" ID="{DFDDDD4E-CE08-4BC2-8B76-4161FAEC5CC2}" ShortID="16722004">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AMB" ID="{4019B0FF-D77E-4503-9128-566646D387DC}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Roomtone_Addd_001" ID="{0B6AF99C-B19A-422B-9DEA-ECC1B7385E00}">
+											<Language>SFX</Language>
+											<AudioFile>Roomtone_Addd_001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="112079929"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Roomtone_Addd_001" ID="{0B6AF99C-B19A-422B-9DEA-ECC1B7385E00}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Roomtone_Addd_002" ID="{95CBE110-F2E3-47F7-93A3-1CE1D7B0A647}" ShortID="711521771">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AMB" ID="{4019B0FF-D77E-4503-9128-566646D387DC}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Roomtone_Addd_002" ID="{0AE20DB2-1436-487F-95AF-C9E7AE0DF95E}">
+											<Language>SFX</Language>
+											<AudioFile>Roomtone_Addd_002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="507806867"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Roomtone_Addd_002" ID="{0AE20DB2-1436-487F-95AF-C9E7AE0DF95E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Roomtone_Addd_003" ID="{DAFEADFB-5682-4C26-8101-9DA0D6A9CB79}" ShortID="860052657">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AMB" ID="{4019B0FF-D77E-4503-9128-566646D387DC}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Roomtone_Addd_003" ID="{051F1BF9-A749-41B5-BA0E-5A74DABC5E66}">
+											<Language>SFX</Language>
+											<AudioFile>Roomtone_Addd_003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="286733391"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Roomtone_Addd_003" ID="{051F1BF9-A749-41B5-BA0E-5A74DABC5E66}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Roomtone_Addd_004" ID="{A5BE658A-50EF-42FD-BC7D-ACC7C685FC02}" ShortID="582783706">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{80FA50E1-552E-4D7D-9FE1-EF242B96385B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="AMB" ID="{4019B0FF-D77E-4503-9128-566646D387DC}" WorkUnitID="{46DE4CD0-A0AF-46EA-8CA4-6538F88985EB}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Roomtone_Addd_004" ID="{11F1E79B-A5A9-4FDE-BF95-70181365881B}">
+											<Language>SFX</Language>
+											<AudioFile>Roomtone_Addd_004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1030913460"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Roomtone_Addd_004" ID="{11F1E79B-A5A9-4FDE-BF95-70181365881B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

@@ -25,6 +25,39 @@ namespace AK
         static const AkUniqueID TEST_EVENT = 4258653052U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace RADIO1
+        {
+            static const AkUniqueID GROUP = 677752379U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NOISE = 33408553U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SOUND = 623086306U;
+            } // namespace STATE
+        } // namespace RADIO1
+
+        namespace RADIO2
+        {
+            static const AkUniqueID GROUP = 677752376U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NOISE = 33408553U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SOUND = 623086306U;
+            } // namespace STATE
+        } // namespace RADIO2
+
+    } // namespace STATES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID GP_FOOTSTEPS = 3669608832U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
@@ -33,7 +66,9 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMB = 1117531639U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

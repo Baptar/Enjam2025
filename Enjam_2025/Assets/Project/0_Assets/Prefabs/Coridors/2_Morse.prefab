@@ -286,6 +286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1185305880869160947}
   - component: {fileID: 5894196429664184673}
+  - component: {fileID: 5685101587984859953}
   m_Layer: 0
   m_Name: 2_Morse
   m_TagString: Untagged
@@ -306,6 +307,7 @@ Transform:
   m_LocalScale: {x: 1.5300002, y: 1.53, z: 1.5300002}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 452872043692779709}
   - {fileID: 2817479612807230942}
   - {fileID: 3351902214748233650}
   - {fileID: 680420451443158074}
@@ -327,6 +329,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstDoorOfCoridor: {fileID: 6808010766010299024}
   isFirstCoridor: 0
+  previousCorridor: {fileID: 0}
+  lastSpawnPointNEXT: {fileID: 0}
+--- !u!114 &5685101587984859953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4413449965127994558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee9b1bd1b6bf9a74882c457ff9d1152e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorsComponent: []
+  blinkOnTime: 0.1
+  blinkOffTime: 0.1
+  shortPause: 0.3
+  longPause: 1.5
+  lights:
+  - light1: {fileID: 0}
+    light2: {fileID: 0}
+    meshRenderer: {fileID: 0}
+    materialOn: {fileID: 0}
+    materialOff: {fileID: 0}
+  - light1: {fileID: 0}
+    light2: {fileID: 0}
+    meshRenderer: {fileID: 0}
+    materialOn: {fileID: 0}
+    materialOff: {fileID: 0}
+  - light1: {fileID: 0}
+    light2: {fileID: 0}
+    meshRenderer: {fileID: 0}
+    materialOn: {fileID: 0}
+    materialOff: {fileID: 0}
 --- !u!1 &5447130906777941515
 GameObject:
   m_ObjectHideFlags: 0
@@ -8931,6 +8968,68 @@ MeshCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3386021461620305730, guid: 15372e5d76ce73f45aca171b1bd75538, type: 3}
   m_PrefabInstance: {fileID: 6197651331570288740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6258473775133581919
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1185305880869160947}
+    m_Modifications:
+    - target: {fileID: 5805839227193920226, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805839227193920226, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805839227193920226, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805839227193920226, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805839227193920226, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805839227193920226, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805839227193920226, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805839227193920226, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805839227193920226, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805839227193920226, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759261784583796571, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+      propertyPath: m_Name
+      value: LightHolder (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+--- !u!4 &452872043692779709 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5805839227193920226, guid: 0cff73201512c1d4c84cc14fe246278f, type: 3}
+  m_PrefabInstance: {fileID: 6258473775133581919}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6278905177327295548
 PrefabInstance:

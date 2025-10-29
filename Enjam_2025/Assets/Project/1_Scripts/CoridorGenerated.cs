@@ -14,9 +14,9 @@ public class CorridorGenerated : MonoBehaviour
         if (isFirstCoridor) CorridorsManager.instance.SetPreviousCorridor(gameObject);
     }
     
-    public void OnCorridorGenerated(int doorNumber)
+    public void OnCorridorGenerated(int doorNumber, bool displayOnNewDoorNumber)
     {
-        firstDoorOfCoridor.SetDoorNumberBehind(doorNumber);
+        if (displayOnNewDoorNumber) firstDoorOfCoridor.SetDoorNumberBehind(doorNumber);
             
         //set the door that is opening to not interactable
         firstDoorOfCoridor.SetIsInteractable(false);

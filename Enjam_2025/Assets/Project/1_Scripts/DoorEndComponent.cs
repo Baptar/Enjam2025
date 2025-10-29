@@ -77,6 +77,8 @@ public class DoorEndComponent : MonoBehaviour, IInteractable
     /// </summary>
     private void OnInteract()
     {
+        AudioManager.instance.PlaySoundInteract();
+        
         // can't interact with anymore
         SetIsInteractable(false);
 
