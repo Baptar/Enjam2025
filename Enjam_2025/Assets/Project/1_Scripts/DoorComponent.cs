@@ -30,7 +30,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
     
     private Outline outline;
     private bool inZone = false;
-    private float startRotateValue;
+    public float startRotateValue;
     
     private void Start()
     {
@@ -162,7 +162,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
             .SetEase(rotationEase);
         
 
-        AudioManager.instance.PlaySoundDoorOpen();
+        //AudioManager.instance.PlaySoundDoorOpen();
         Sequence seq = DOTween.Sequence();
         // open door
         seq.Append(gameObject.transform.DOLocalRotate(new Vector3(gameObject.transform.localEulerAngles.x, newRotateValue, gameObject.transform.localEulerAngles.z), durationRotate).SetEase(Ease.InOutFlash));
@@ -187,7 +187,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
             .Insert(1.7f,
                 gameObject.transform
                     .DOLocalRotate(
-                        new Vector3(gameObject.transform.localEulerAngles.x, startRotateValue,
+                        new Vector3(gameObject.transform.localEulerAngles.x, 0,
                             gameObject.transform.localEulerAngles.z), durationRotate).SetEase(Ease.InOutFlash))
             // manage corridor Data
             .Insert(1.9f, DOVirtual.DelayedCall(0, () =>

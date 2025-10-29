@@ -437,6 +437,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstDoorOfCoridor: {fileID: 6808010766010299024}
   isFirstCoridor: 0
+  previousCorridor: {fileID: 0}
+  lastSpawnPointNEXT: {fileID: 0}
 --- !u!1 &6350819487759921366
 GameObject:
   m_ObjectHideFlags: 0

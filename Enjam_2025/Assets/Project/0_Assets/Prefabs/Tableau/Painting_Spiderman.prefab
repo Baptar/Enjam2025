@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 588106104549248459}
   - component: {fileID: 3518333862821529200}
   m_Layer: 0
-  m_Name: Painting_Hold (4)
+  m_Name: Painting_Spiderman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3168605689648388165}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.677001, y: 2.268, z: -12.778}
-  m_LocalScale: {x: 1.10904, y: 0.55452, z: 0.03169692}
+  m_LocalRotation: {x: 0.00000011920933, y: 0.7071065, z: -0.000000119209204, w: 0.7071072}
+  m_LocalPosition: {x: 12.79249, y: 2.143693, z: -9.423311}
+  m_LocalScale: {x: -1.10904, y: -0.55452, z: 0.03169692}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &8634405301653846864
 MeshFilter:
   m_ObjectHideFlags: 0
