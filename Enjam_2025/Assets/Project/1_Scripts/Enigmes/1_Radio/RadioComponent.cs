@@ -13,6 +13,7 @@ public class RadioComponent : MonoBehaviour, IInteractable
     [SerializeField] private Transform radioInspectPosition;
     [SerializeField] private GameObject indicatorGO;
     [SerializeField] private Transform[] channelsPosition;
+    [SerializeField] private bool radio1;
     
     [Space(10)]
     [Header("Debug")]
@@ -120,15 +121,15 @@ public class RadioComponent : MonoBehaviour, IInteractable
             if (actualRadio == solutionRadio)
             {
                 // WWISE good sound
-                AkUnitySoundEngine.SetState("Radio1", "Sound");
-                //AkUnitySoundEngine.SetState("Radio2", "Sound");
+                if (radio1) AkUnitySoundEngine.SetState("Radio1", "Sound");
+                else AkUnitySoundEngine.SetState("Radio2", "Sound");
 
             }
             else
             {
                 // WWISE bad sound
-                AkUnitySoundEngine.SetState("Radio1", "Noise");
-                //AkUnitySoundEngine.SetState("Radio2", "Noise");
+                if (radio1) AkUnitySoundEngine.SetState("Radio1", "Noise");
+                else AkUnitySoundEngine.SetState("Radio2", "Noise");
             }
         });
     }
@@ -144,14 +145,14 @@ public class RadioComponent : MonoBehaviour, IInteractable
             if (actualRadio == solutionRadio)
             {
                 // WWISE good sound
-                AkUnitySoundEngine.SetState("Radio1", "Sound");
-                //AkUnitySoundEngine.SetState("Radio2", "Sound");
+                if (radio1) AkUnitySoundEngine.SetState("Radio1", "Sound");
+                else AkUnitySoundEngine.SetState("Radio2", "Sound");
             }
             else
             {
                 // WWISE bad sound
-                AkUnitySoundEngine.SetState("Radio1", "Noise");
-                //AkUnitySoundEngine.SetState("Radio2", "Noise");
+                if (radio1) AkUnitySoundEngine.SetState("Radio1", "Noise");
+                else AkUnitySoundEngine.SetState("Radio2", "Noise");
             }
         });
     }

@@ -11,10 +11,70 @@ PrefabInstance:
     - target: {fileID: -7252362532294161517, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: firstDoorOfCoridor
       value: 
-      objectReference: {fileID: 481077040560236045}
+      objectReference: {fileID: 6294754125132646183}
+    - target: {fileID: -7252362532294161517, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: elementToAppearAfter.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7252362532294161517, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToAppearAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8775784478147721608}
+    - target: {fileID: -7252362532294161517, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToAppearAfter.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4874392932824283355}
+    - target: {fileID: -7252362532294161517, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToAppearAfter.Array.data[2]'
+      value: 
+      objectReference: {fileID: 7648801009351277417}
+    - target: {fileID: -7252362532294161517, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToAppearAfter.Array.data[3]'
+      value: 
+      objectReference: {fileID: 4891298487834410352}
+    - target: {fileID: -7252362532294161517, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToAppearAfter.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3415732261596981423}
     - target: {fileID: 711087115635266652, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 711087115635266652, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: corridorGenerated
+      value: 
+      objectReference: {fileID: 492613470544319693}
+    - target: {fileID: 711087115635266652, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: elementToRemoveWhenOpenDoor.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 711087115635266652, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5001043692100202087}
+    - target: {fileID: 711087115635266652, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3583509266143321577}
+    - target: {fileID: 711087115635266652, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8355521843246795879}
+    - target: {fileID: 711087115635266652, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3238027735371079298}
+    - target: {fileID: 711087115635266652, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2015066039759830569}
+    - target: {fileID: 711087115635266652, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8856981525002598537}
+    - target: {fileID: 714523679811212815, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1191045854368451197, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,10 +116,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1294102976336821370, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: radio1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825995172465088751, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1829317529199221436, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 1829317529199221436, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: corridorGenerated
+      value: 
+      objectReference: {fileID: 492613470544319693}
+    - target: {fileID: 1829317529199221436, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: elementToRemoveWhenOpenDoor.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829317529199221436, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5001043692100202087}
+    - target: {fileID: 1829317529199221436, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3583509266143321577}
+    - target: {fileID: 1829317529199221436, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8355521843246795879}
+    - target: {fileID: 1829317529199221436, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3238027735371079298}
+    - target: {fileID: 1829317529199221436, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2015066039759830569}
+    - target: {fileID: 1829317529199221436, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8856981525002598537}
     - target: {fileID: 1954934843656419667, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
       value: 11
@@ -68,37 +168,294 @@ PrefabInstance:
       propertyPath: doorNumber
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 2416543769301386615, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: corridorGenerated
+      value: 
+      objectReference: {fileID: 492613470544319693}
+    - target: {fileID: 2416543769301386615, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: elementToRemoveWhenOpenDoor.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2416543769301386615, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5001043692100202087}
+    - target: {fileID: 2416543769301386615, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3583509266143321577}
+    - target: {fileID: 2416543769301386615, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8355521843246795879}
+    - target: {fileID: 2416543769301386615, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3238027735371079298}
+    - target: {fileID: 2416543769301386615, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2015066039759830569}
+    - target: {fileID: 2416543769301386615, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8856981525002598537}
+    - target: {fileID: 2431239800698177316, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3136733581240981952, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3149103436908518291, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
       value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149103436908518291, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: corridorGenerated
+      value: 
+      objectReference: {fileID: 492613470544319693}
+    - target: {fileID: 3149103436908518291, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: elementToRemoveWhenOpenDoor.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149103436908518291, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5001043692100202087}
+    - target: {fileID: 3149103436908518291, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3583509266143321577}
+    - target: {fileID: 3149103436908518291, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8355521843246795879}
+    - target: {fileID: 3149103436908518291, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3238027735371079298}
+    - target: {fileID: 3149103436908518291, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2015066039759830569}
+    - target: {fileID: 3149103436908518291, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8856981525002598537}
+    - target: {fileID: 4436007592112434175, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4448407512953170348, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
       value: 33
       objectReference: {fileID: 0}
+    - target: {fileID: 4448407512953170348, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: corridorGenerated
+      value: 
+      objectReference: {fileID: 492613470544319693}
+    - target: {fileID: 4448407512953170348, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: elementToRemoveWhenOpenDoor.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448407512953170348, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5001043692100202087}
+    - target: {fileID: 4448407512953170348, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3583509266143321577}
+    - target: {fileID: 4448407512953170348, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8355521843246795879}
+    - target: {fileID: 4448407512953170348, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3238027735371079298}
+    - target: {fileID: 4448407512953170348, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2015066039759830569}
+    - target: {fileID: 4448407512953170348, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8856981525002598537}
     - target: {fileID: 4962407868096623587, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962407868096623587, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: corridorGenerated
+      value: 
+      objectReference: {fileID: 492613470544319693}
+    - target: {fileID: 4962407868096623587, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: elementToRemoveWhenOpenDoor.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962407868096623587, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5001043692100202087}
+    - target: {fileID: 4962407868096623587, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3583509266143321577}
+    - target: {fileID: 4962407868096623587, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8355521843246795879}
+    - target: {fileID: 4962407868096623587, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3238027735371079298}
+    - target: {fileID: 4962407868096623587, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2015066039759830569}
+    - target: {fileID: 4962407868096623587, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8856981525002598537}
+    - target: {fileID: 4965840760647463344, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: elementToRemoveWhenOpenDoor.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5001043692100202087}
+    - target: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3583509266143321577}
+    - target: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8355521843246795879}
+    - target: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3238027735371079298}
+    - target: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2015066039759830569}
+    - target: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8856981525002598537}
+    - target: {fileID: 5396209645253859882, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5441005075901560299, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: m_Name
       value: L_0_radio
       objectReference: {fileID: 0}
+    - target: {fileID: 6832682873162788511, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6838336331820559564, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6838336331820559564, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: corridorGenerated
+      value: 
+      objectReference: {fileID: 492613470544319693}
+    - target: {fileID: 6838336331820559564, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: elementToRemoveWhenOpenDoor.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6838336331820559564, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5001043692100202087}
+    - target: {fileID: 6838336331820559564, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3583509266143321577}
+    - target: {fileID: 6838336331820559564, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8355521843246795879}
+    - target: {fileID: 6838336331820559564, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3238027735371079298}
+    - target: {fileID: 6838336331820559564, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2015066039759830569}
+    - target: {fileID: 6838336331820559564, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8856981525002598537}
+    - target: {fileID: 7225368748851291862, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8111367799507403746, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
-      propertyPath: elementToRemoveWhenOpenDoor.Array.size
+      propertyPath: doorIDLinked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: corridorGenerated
+      value: 
+      objectReference: {fileID: 492613470544319693}
+    - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: elementToRemoveWhenOpenDoor.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7862491021986405564}
+    - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5001043692100202087}
+    - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3583509266143321577}
+    - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8355521843246795879}
+    - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3238027735371079298}
+    - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2015066039759830569}
+    - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: 'elementToRemoveWhenOpenDoor.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8856981525002598537}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6736593357873234291, guid: a5dddb9530697564bb41eba514022629, type: 3}
+    - {fileID: 4240684888166612617, guid: a5dddb9530697564bb41eba514022629, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4237369860325780479, guid: a5dddb9530697564bb41eba514022629, type: 3}
       insertIndex: 8
@@ -119,15 +476,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ab34a2817235b48852a25bf81c3901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &481077040560236045 stripped
+--- !u!114 &492613470544319693 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1954934843656419667, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_CorrespondingSourceObject: {fileID: -7252362532294161517, guid: a5dddb9530697564bb41eba514022629, type: 3}
   m_PrefabInstance: {fileID: 2129204151007895390}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6200936261426440885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ab34a2817235b48852a25bf81c3901, type: 3}
+  m_Script: {fileID: 11500000, guid: 97a5d297d5a325545af8407c59021e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &898996063514927908 stripped
@@ -152,6 +509,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ab34a2817235b48852a25bf81c3901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2015066039759830569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 466826283130200439, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2321492309001926386 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4448407512953170348, guid: a5dddb9530697564bb41eba514022629, type: 3}
@@ -166,6 +528,21 @@ MonoBehaviour:
 --- !u!4 &2828923069152031905 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4237369860325780479, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3238027735371079298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3558893692934357468, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3415732261596981423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3669146726390347761, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3583509266143321577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3186117876928463543, guid: a5dddb9530697564bb41eba514022629, type: 3}
   m_PrefabInstance: {fileID: 2129204151007895390}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &3909035419722319053 stripped
@@ -201,6 +578,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ab34a2817235b48852a25bf81c3901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4874392932824283355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6784991074431969157, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4891298487834410352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6804114316445000238, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5001043692100202087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6407273552152359225, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6200936261426440885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5441005075901560299, guid: a5dddb9530697564bb41eba514022629, type: 3}
@@ -229,7 +621,18 @@ MonoBehaviour:
   - {fileID: 4324926951144315433}
   - {fileID: 1464296678383209218}
   - {fileID: 2321492309001926386}
-  - {fileID: 481077040560236045}
+  - {fileID: 6294754125132646183}
+--- !u!114 &6294754125132646183 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ab34a2817235b48852a25bf81c3901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6436330301862735037 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4962407868096623587, guid: a5dddb9530697564bb41eba514022629, type: 3}
@@ -241,17 +644,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ab34a2817235b48852a25bf81c3901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7648801009351277417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8622577008147489847, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7862491021986405564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8111367799507403746, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7865848580106231535 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
   m_PrefabInstance: {fileID: 2129204151007895390}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 7862491021986405564}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9ab34a2817235b48852a25bf81c3901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8355521843246795879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7960311611227558713, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8775784478147721608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7225368748851291862, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8856981525002598537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7450680161762469847, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 2129204151007895390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4175336444531145027
 PrefabInstance:
   m_ObjectHideFlags: 0

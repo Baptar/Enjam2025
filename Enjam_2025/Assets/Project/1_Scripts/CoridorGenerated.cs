@@ -7,11 +7,27 @@ public class CorridorGenerated : MonoBehaviour
     [SerializeField] private bool isFirstCoridor = false;
     [HideInInspector] public GameObject previousCorridor;
     public GameObject lastSpawnPointNEXT;
+    [SerializeField] private GameObject[] elementToAppearAfter;
 
 
     private void Start()
     {
-        if (isFirstCoridor) CorridorsManager.instance.SetPreviousCorridor(gameObject);
+        if (isFirstCoridor)
+        {
+            CorridorsManager.instance.SetPreviousCorridor(gameObject);
+        }
+        else
+        {
+            MakeAfterElementAppear(false);
+        }
+    }
+
+    public void MakeAfterElementAppear(bool enable)
+    {
+        foreach (GameObject go in elementToAppearAfter)
+        {
+            go.SetActive(enable);
+        }
     }
     
     public void OnCorridorGenerated(int doorNumber, bool displayOnNewDoorNumber)

@@ -27,6 +27,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
     [SerializeField] private TMP_Text doorNumberBehindText;
     [SerializeField] private GameObject doorCenter;
     [SerializeField] private GameObject moveTarget;
+    [SerializeField] private CorridorGenerated corridorGenerated;
     
     private Outline outline;
     private bool inZone = false;
@@ -192,6 +193,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
             // manage corridor Data
             .Insert(1.9f, DOVirtual.DelayedCall(0, () =>
             {
+                corridorGenerated.MakeAfterElementAppear(true);
                 CorridorsManager.instance.RemovePreviousCorridor();
                 CorridorsManager.instance.SetPreviousCorridor(corridorGenerated.gameObject);
             }))

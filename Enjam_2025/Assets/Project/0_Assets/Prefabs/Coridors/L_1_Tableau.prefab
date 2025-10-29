@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Painting_Spiderman
       objectReference: {fileID: 0}
+    - target: {fileID: 3168605689648388165, guid: a4a84ef6b309e394384596f95978db3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4366489649426259184, guid: a4a84ef6b309e394384596f95978db3e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0165179
@@ -90,6 +94,10 @@ PrefabInstance:
     - target: {fileID: 3168605689648388165, guid: a4a84ef6b309e394384596f95978db3e, type: 3}
       propertyPath: m_Name
       value: Painting_Spiderman
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168605689648388165, guid: a4a84ef6b309e394384596f95978db3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4366489649426259184, guid: a4a84ef6b309e394384596f95978db3e, type: 3}
       propertyPath: m_LocalScale.x
@@ -170,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Painting_Spiderman
       objectReference: {fileID: 0}
+    - target: {fileID: 3168605689648388165, guid: a4a84ef6b309e394384596f95978db3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4366489649426259184, guid: a4a84ef6b309e394384596f95978db3e, type: 3}
       propertyPath: m_LocalScale.x
       value: -4.214624
@@ -248,7 +260,7 @@ PrefabInstance:
     - target: {fileID: -7252362532294161517, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: firstDoorOfCoridor
       value: 
-      objectReference: {fileID: 9006054803303479821}
+      objectReference: {fileID: 3246457216137304871}
     - target: {fileID: 711087115635266652, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
       value: 32
@@ -369,6 +381,10 @@ PrefabInstance:
       propertyPath: doorIDLinked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7723573252019003299, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8117008799033901489, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
       value: 12
@@ -434,7 +450,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorComponent: {fileID: 2523351059367637181}
-  isDoorAtRight: 1
   spidermanPaint: {fileID: 1468652610537848128}
 --- !u!4 &1238031736627368917 stripped
 Transform:
@@ -459,7 +474,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorComponent: {fileID: 9131531310553536994}
-  isDoorAtRight: 1
   spidermanPaint: {fileID: 5433260452221509136}
 --- !u!114 &2523351059367637181 stripped
 MonoBehaviour:
@@ -494,6 +508,17 @@ MonoBehaviour:
   - {fileID: 515178724944467233}
   - {fileID: 2019979757153466398}
   - {fileID: 613820903002745288}
+--- !u!114 &3246457216137304871 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+  m_PrefabInstance: {fileID: 7483502368826721118}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ab34a2817235b48852a25bf81c3901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3275045767032313971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5380096232551979821, guid: a5dddb9530697564bb41eba514022629, type: 3}
@@ -528,7 +553,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorComponent: {fileID: 6512581992481467122}
-  isDoorAtRight: 1
   spidermanPaint: {fileID: 793081884695646054}
 --- !u!1 &6291293057796016577 stripped
 GameObject:
@@ -548,7 +572,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorComponent: {fileID: 5067662288317744681}
-  isDoorAtRight: 1
   spidermanPaint: {fileID: 4682404936970054052}
 --- !u!114 &6512581992481467122 stripped
 MonoBehaviour:
@@ -566,17 +589,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1169462372674611383, guid: a5dddb9530697564bb41eba514022629, type: 3}
   m_PrefabInstance: {fileID: 7483502368826721118}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9006054803303479821 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1954934843656419667, guid: a5dddb9530697564bb41eba514022629, type: 3}
-  m_PrefabInstance: {fileID: 7483502368826721118}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ab34a2817235b48852a25bf81c3901, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9131531310553536994 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1829317529199221436, guid: a5dddb9530697564bb41eba514022629, type: 3}
@@ -604,6 +616,10 @@ PrefabInstance:
     - target: {fileID: 3168605689648388165, guid: a4a84ef6b309e394384596f95978db3e, type: 3}
       propertyPath: m_Name
       value: Painting_Spiderman
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168605689648388165, guid: a4a84ef6b309e394384596f95978db3e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4366489649426259184, guid: a4a84ef6b309e394384596f95978db3e, type: 3}
       propertyPath: m_LocalScale.x

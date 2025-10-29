@@ -7,6 +7,7 @@ public class PaintManager : MonoBehaviour
     private void Start()
     {
         InitRandomPaintSpiderman();
+        AudioManager.instance.StopRadio();
     }
     
     private void InitRandomPaintSpiderman()

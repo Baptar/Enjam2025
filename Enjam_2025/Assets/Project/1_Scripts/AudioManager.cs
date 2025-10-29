@@ -18,17 +18,23 @@ public class AudioManager : MonoBehaviour
 
 
     private uint playing_FS_ID;
+    private uint playing_radio_ID;
     
     private void Awake() => instance = this;
 
     private void Start() {
         PlayAmbiance();
-        PlayRadio();
     }
 
     private void PlayAmbiance() => ambiance.Post(gameObject);
 
-    private void PlayRadio() => radioEvent.Post(gameObject);
+    public void PlayRadio()
+    {
+        AkSoundEngine.StopPlayingID(playing_radio_ID);
+        playing_radio_ID = radioEvent.Post(gameObject);
+    }
+
+    public void StopRadio() => AkSoundEngine.StopPlayingID(playing_radio_ID);
   
 
     public void PlaySoundFootStep() => playing_FS_ID = footStepEvent.Post(gameObject);
