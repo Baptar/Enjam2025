@@ -1600,7 +1600,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2438480433251617113, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
       propertyPath: m_Height
-      value: 1.5
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 2700125204493302126, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
       propertyPath: m_IsActive
