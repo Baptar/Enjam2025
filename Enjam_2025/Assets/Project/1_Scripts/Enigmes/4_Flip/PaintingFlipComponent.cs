@@ -12,12 +12,18 @@ public class PaintingFlipComponent : MonoBehaviour, IInteractable
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (isFlipped) gameObject.transform.Rotate(0, 0, 180);
         outline = GetComponent<Outline>();
         outline.enabled = false;
     }
+
+    public void InitRotation()
+    {
+        if (isFlipped) gameObject.transform.Rotate(0, 0, 180);
+    }
     
     public bool GetIsFlipped() => isFlipped;
+    
+    public void SetIsFlipped(bool value) => isFlipped = value;
 
 
     public bool GetIsInteractable()
@@ -38,18 +44,23 @@ public class PaintingFlipComponent : MonoBehaviour, IInteractable
     public void Interact(PlayerInteractor interactor)
     {
         if (!GetIsInteractable()) return;
-        if (PaintingFlipManagers.Instance == null) return;
-        
         
         AudioManager.instance.PlaySoundInteract();
         AudioManager.instance.PlaySoundInteractPaint();
         
         Vector3 newEulerRoration =new Vector3(gameObject.transform.localEulerAngles.x, gameObject.transform.localEulerAngles.y,
             (gameObject.transform.localEulerAngles.z - 180) % 360);
-        gameObject.transform.DOLocalRotate(newEulerRoration, 2.0f).SetEase(Ease.InOutFlash)
+        gameObject.transform.DOLocalRotate(newEulerRoration, 1.2f).SetEase(Ease.InOutFlash)
+            .OnStart(()=>
+            {
+                SetIsInteractable(false);
+                outline.enabled = false;
+            })
             .OnComplete((() =>
             {
+                SetIsInteractable(true);
                 isFlipped = !isFlipped;
+                if (PaintingFlipManagers.Instance == null) return;
                 PaintingFlipManagers.Instance.CheckPaintingFlipped();
             }));
     }

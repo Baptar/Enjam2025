@@ -17,9 +17,22 @@ public class PaintingFlipManagers : MonoBehaviour
 
     private void Start()
     {
-        doorText.text = "End";
+        InitPaints();
+        doorText.text = "END";
         doorEnd.SetIsInteractable(false);
     }
+
+    private void InitPaints()
+    {
+        int value = Random.Range(0, paintingComponents.Length);
+
+        for (int i = 0; i < paintingComponents.Length; i++)
+        {
+            paintingComponents[i].SetIsFlipped(value != i);
+            paintingComponents[i].InitRotation();
+        }
+    }
+    
     public void CheckPaintingFlipped()
     {
         foreach (PaintingFlipComponent paintingComponent in paintingComponents)
@@ -48,7 +61,7 @@ public class PaintingFlipManagers : MonoBehaviour
     {
         Sequence seq = DOTween.Sequence();
         seq.Append(doorText.DOFade(0, 1.0f))
-            .AppendCallback(() => doorText.text = "Start").SetEase(ease)
+            .AppendCallback(() => doorText.text = "START").SetEase(ease)
             .Insert(0.0f, doorText.DOFade(1, 1.0f));
     }
 }

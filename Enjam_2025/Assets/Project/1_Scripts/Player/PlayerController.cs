@@ -43,7 +43,6 @@ public class PlayerController : MonoBehaviour
     private Quaternion camTargetRot;
     private Quaternion bodyTargetRot;
     private bool isMoving = false;
-    public Vector3 gravityDir = Vector3.up;
 
     private void Awake() => instance = this;
     
@@ -107,7 +106,7 @@ public class PlayerController : MonoBehaviour
 
         // --- Gravité ---
         if (!controller.isGrounded)
-            playerVelocity += -gravityDir * gravity * Time.deltaTime;
+            playerVelocity.y += gravity * Time.deltaTime;
 
         controller.Move(playerVelocity * Time.deltaTime);
     }

@@ -86,6 +86,7 @@ public class RadioComponent : MonoBehaviour, IInteractable
     /// </summary>
     private void ZoomOnRadio()
     {
+        SetIsInteractable(false);
         isInspectingRadio = true;
         outline.enabled = false;
         PlayerController.instance.isInspectingRadio = true;
@@ -94,7 +95,8 @@ public class RadioComponent : MonoBehaviour, IInteractable
 
         DG.Tweening.Sequence seq = DOTween.Sequence();
         seq.Append(playerCam.transform.DOMove(radioInspectPosition.position, 1.0f).SetEase(Ease.InOutFlash))
-            .Insert(0.0f, playerCam.transform.DORotate(radioInspectPosition.eulerAngles, 1.0f).SetEase(Ease.InOutFlash));
+            .Insert(0.0f, playerCam.transform.DORotate(radioInspectPosition.eulerAngles, 1.0f).SetEase(Ease.InOutFlash))
+            .OnComplete(()=> { SetIsInteractable(true); });
     }
     
     private void ExitInspectMode()
