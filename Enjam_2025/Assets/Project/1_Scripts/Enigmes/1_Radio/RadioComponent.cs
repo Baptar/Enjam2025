@@ -64,6 +64,7 @@ public class RadioComponent : MonoBehaviour, IInteractable
         if (!GetIsInteractable()) return;
         
         AudioManager.instance.PlaySoundInteract();
+        AudioManager.instance.StopPlaySoundFootStep();
         
         if (!isInspectingRadio) 
             ZoomOnRadio();

@@ -3,7 +3,7 @@
   "Project": {
    "Name": "Enjam_2025_WwiseProject",
    "GUID": "{B69BFB2F-5E4E-45B6-AB97-0069C6CC595C}",
-   "Generator": "2024.1.6.8842"
+   "Generator": "2024.1.5.8803"
   },
   "CacheRoot": "../../../../Enjam_2025_WwiseProject/.cache",
   "Platforms": [
@@ -31,6 +31,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{C2A657F8-1674-F33E-5976-2EF313C9E6C3}"
+  "FileHash": "{61BE593E-176B-5752-CBBC-45E99622F7DF}"
  }
 }

@@ -21,7 +21,6 @@ public class RadioManager : MonoBehaviour
     private void Start()
     {
         //AudioManager.instance.StopRadio();
-        AudioManager.instance.PlayRadio();
         InitRandomRadioSolution();
     }
 
@@ -37,9 +36,9 @@ public class RadioManager : MonoBehaviour
         if (secondeRadioComponent.solutionRadio == E_RadioState.First)
             AkUnitySoundEngine.SetState("Radio2", "Sound");
         else AkUnitySoundEngine.SetState("Radio2", "Noise");
-            
         
-        
+        if (!AudioManager.instance.isPlayingRadio) AudioManager.instance.PlayRadio();
+
         int doorValue = ((int)firstRadioComponent.solutionRadio+1) * 10 + (int)secondeRadioComponent.solutionRadio + 1;
         Debug.Log("doorValue is : " + doorValue);
         

@@ -166,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2416543769301386615, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
-      value: 23
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 2416543769301386615, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: corridorGenerated
@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3149103436908518291, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: doorNumber
-      value: 31
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 3149103436908518291, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: corridorGenerated
@@ -324,6 +324,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: doorNumber
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: doorIDLinked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: corridorGenerated
+      value: 
+      objectReference: {fileID: 492613470544319693}
     - target: {fileID: 5392786098586392697, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: elementToRemoveWhenOpenDoor.Array.size
       value: 7

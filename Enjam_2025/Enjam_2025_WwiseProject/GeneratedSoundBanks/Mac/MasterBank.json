@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{E280E47F-0000-4F65-96CA-C63F8AAB9E42}",
     "Language": "SFX",
-    "Hash": "{ACA6FD16-36A8-F0AB-CD07-22A791113409}",
+    "Hash": "{CDA55CA1-0201-375B-3D82-56021E269E55}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\MasterBank",
     "ShortName": "MasterBank",
     "Path": "MasterBank.bnk",
@@ -494,7 +494,7 @@
       "Name": "Play_Door",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Door",
       "GUID": "{8913F5A9-0410-49FF-A9D8-9C578D2D8A5C}",
-      "MaxAttenuation": "3",
+      "MaxAttenuation": "30",
       "DurationType": "OneShot",
       "DurationMin": "6.723104",
       "DurationMax": "6.723104",
@@ -609,7 +609,7 @@
       "Name": "Play_InteractPicture",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_InteractPicture",
       "GUID": "{B3537EDF-AE47-4911-91E0-B0535F42827A}",
-      "MaxAttenuation": "3",
+      "MaxAttenuation": "30",
       "DurationType": "OneShot",
       "DurationMin": "0.7137097",
       "DurationMax": "0.79826176",
@@ -686,7 +686,7 @@
       "Name": "Play_SFX_Light",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_SFX_Light",
       "GUID": "{7894A09F-08C3-49A0-A428-52B7F22FF96E}",
-      "MaxAttenuation": "3",
+      "MaxAttenuation": "30",
       "DurationType": "OneShot",
       "DurationMin": "0.9097083",
       "DurationMax": "0.9097083",
@@ -834,6 +834,6 @@
     ]
    }
   ],
-  "FileHash": "{A96197E1-473E-3F3E-282E-B9506BC4D909}"
+  "FileHash": "{F6FED89C-C845-D246-4F91-A2A28CAD3C5E}"
  }
 }

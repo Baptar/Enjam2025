@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 8634405301653846864}
   - component: {fileID: 588106104549248459}
   - component: {fileID: 3518333862821529200}
-  m_Layer: 0
+  - component: {fileID: 3760365905874408051}
+  - component: {fileID: 958748506626875787}
+  m_Layer: 3
   m_Name: Painting_Spiderman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,3 +110,35 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3760365905874408051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3168605689648388165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 8.66
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &958748506626875787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3168605689648388165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c720735559542754282dff39d2301530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlipped: 0
+  isInteractable: 1

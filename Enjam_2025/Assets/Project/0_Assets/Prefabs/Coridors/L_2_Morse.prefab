@@ -48,9 +48,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1294102976336821370, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: isInteractable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5441005075901560299, guid: a5dddb9530697564bb41eba514022629, type: 3}
       propertyPath: m_Name
       value: L_2_Morse
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879421159194270498, guid: a5dddb9530697564bb41eba514022629, type: 3}
+      propertyPath: isInteractable
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

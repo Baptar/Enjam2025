@@ -134,30 +134,65 @@ public class MorseManager : MonoBehaviour
 
     void AddBlinkToSequence()
     {
+        // Capture locale des références au moment de la création du step
+        Light light1 = selectedLightStruct.light1;
+        Light light2 = selectedLightStruct.light2;
+        MeshRenderer mesh = selectedLightStruct.meshRenderer;
+        Material matOn = selectedLightStruct.materialOn;
+        Material matOff = selectedLightStruct.materialOff;
+        DoorComponent door = selectedDoor;
+
         // Lumière se rallume + son
         blinkSequence.AppendCallback(() =>
         {
-            // Change le matériau
-            selectedLightStruct.meshRenderer.material = selectedLightStruct.materialOn;
-            // Joue le son
-            AudioManager.instance.PlaySoundDoorKnock(selectedDoor.gameObject);
-            AudioManager.instance.PlaySoundLight(selectedLightStruct.light1.gameObject);
+            // Change le matériau (sur la copie mesh)
+            if (mesh != null) mesh.material = matOn;
+
+            // Joue le son en utilisant la copie du door et de la light
+            if (door != null) AudioManager.instance.PlaySoundDoorKnock(selectedDoor.gameObject);
+                //PlaySoundOnEachDoors();
+
+            if (light1 != null)
+                AudioManager.instance.PlaySoundLight(light1.gameObject);
         });
 
-        // Tween des lumières
-        blinkSequence.Append(selectedLightStruct.light1.DOIntensity(1.0f, blinkOnTime))
-            .Join(selectedLightStruct.light2.DOIntensity(1.0f, blinkOnTime));
+        // Tween des lumières (sur les copies)
+        if (light1 != null && light2 != null)
+        {
+            blinkSequence.Append(light1.DOIntensity(1.0f, blinkOnTime))
+                .Join(light2.DOIntensity(1.0f, blinkOnTime));
+        }
+        else if (light1 != null) // fallback si une seule lumière
+        {
+            blinkSequence.Append(light1.DOIntensity(1.0f, blinkOnTime));
+        }
 
         // Pause éteinte
         blinkSequence.AppendInterval(shortPause);
 
-        // Lumière s'éteint
+        // Lumière s'éteint (mat off)
         blinkSequence.AppendCallback(() =>
         {
-            selectedLightStruct.meshRenderer.material = selectedLightStruct.materialOff;
+            if (mesh != null) mesh.material = matOff;
         });
 
-        blinkSequence.Append(selectedLightStruct.light1.DOIntensity(0.0f, blinkOnTime))
-            .Join(selectedLightStruct.light2.DOIntensity(0.0f, blinkOnTime));
+        // Tween éteindre
+        if (light1 != null && light2 != null)
+        {
+            blinkSequence.Append(light1.DOIntensity(0.0f, blinkOnTime))
+                .Join(light2.DOIntensity(0.0f, blinkOnTime));
+        }
+        else if (light1 != null)
+        {
+            blinkSequence.Append(light1.DOIntensity(0.0f, blinkOnTime));
+        }
+    }
+
+    private void PlaySoundOnEachDoors()
+    {
+        foreach (DoorComponent doorComponent in doorsComponent)
+        {
+            AudioManager.instance.PlaySoundDoorKnock(doorComponent.gameObject);
+        }
     }
 }

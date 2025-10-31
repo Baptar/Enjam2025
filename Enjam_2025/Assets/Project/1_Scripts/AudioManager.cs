@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
 
     private uint playing_FS_ID;
     private uint playing_radio_ID;
+    [HideInInspector] public bool isPlayingRadio;
     
     private void Awake() => instance = this;
 
@@ -32,14 +33,26 @@ public class AudioManager : MonoBehaviour
     {
         AkSoundEngine.StopPlayingID(playing_radio_ID);
         playing_radio_ID = radioEvent.Post(gameObject);
+        isPlayingRadio = true;
     }
 
-    public void StopRadio() => AkSoundEngine.StopPlayingID(playing_radio_ID);
-  
+    public void StopRadio()
+    {
+        AkSoundEngine.StopPlayingID(playing_radio_ID);
+        isPlayingRadio = false;
+    }
 
-    public void PlaySoundFootStep() => playing_FS_ID = footStepEvent.Post(gameObject);
 
-    public void StopPlaySoundFootStep() => AkSoundEngine.StopPlayingID(playing_FS_ID);
+    public void PlaySoundFootStep()
+    {
+        playing_FS_ID = footStepEvent.Post(gameObject);
+    }
+
+    public void StopPlaySoundFootStep()
+    {
+        Debug.Log("Stop PlaySoundFootStep");
+        AkSoundEngine.StopPlayingID(playing_FS_ID);
+    }
     
     public void PlaySoundDoorKnock(GameObject door) => doorKnockEvent.Post(door);
     

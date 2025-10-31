@@ -43,10 +43,11 @@ public class PlayerController : MonoBehaviour
     private Quaternion camTargetRot;
     private Quaternion bodyTargetRot;
     private bool isMoving = false;
+    public Vector3 gravityDir = Vector3.up;
 
     private void Awake() => instance = this;
     
-    void Start()
+    private void Start()
     {
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -56,14 +57,15 @@ public class PlayerController : MonoBehaviour
         pitch = cameraTransform.localEulerAngles.x;
     }
 
-    void Update()
+    private void Update()
     {
         if (!blockCamera && !isInspectingRadio) HandleLook();
         if (!isInspectingRadio) HandleMovement();
         if (!isInspectingRadio) HandleHeadBob();
+        CheckFootSteps();
     }
 
-    void HandleLook()
+    private void HandleLook()
     {
         float mouseX = Input.GetAxisRaw("Mouse X") * mouseSensitivity * 0.01f;
         float mouseY = Input.GetAxisRaw("Mouse Y") * mouseSensitivity * 0.01f;
@@ -88,42 +90,49 @@ public class PlayerController : MonoBehaviour
         );
     }
 
-    void HandleMovement()
+    private void HandleMovement()
     {
-        // old input system => change later
+        // --- Inputs ---
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputZ = Input.GetAxisRaw("Vertical");
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
 
-        targetSpeed = (isRunning ? runSpeed : walkSpeed);
+        targetSpeed = isRunning ? runSpeed : walkSpeed;
 
+        // --- Déplacement ---
         Vector3 desiredMove = (transform.forward * inputZ + transform.right * inputX).normalized * targetSpeed;
         currentMove = Vector3.Lerp(currentMove, desiredMove, Time.deltaTime * acceleration);
 
         controller.Move(currentMove * Time.deltaTime);
 
-        // Manage gravity if not grounded
+        // --- Gravité ---
         if (!controller.isGrounded)
-            playerVelocity.y += gravity * Time.deltaTime;
+            playerVelocity += -gravityDir * gravity * Time.deltaTime;
 
         controller.Move(playerVelocity * Time.deltaTime);
-        
-        // --- Footstep logic ---
+    }
+
+    private void CheckFootSteps()
+    {
+        // --- Footstep (détection début / fin de mouvement) ---
         bool currentlyMoving = controller.isGrounded && currentMove.magnitude > 0.1f;
 
+        // Début du mouvement
         if (currentlyMoving && !isMoving)
         {
             isMoving = true;
-            AudioManager.instance.PlaySoundFootStep();
+            AudioManager.instance.PlaySoundFootStep(); // joué une seule fois quand on commence à bouger
         }
-        else
+
+        // Fin du mouvement
+        if (!currentlyMoving)
         {
-            AudioManager.instance.StopPlaySoundFootStep();
             isMoving = false;
+            AudioManager.instance.StopPlaySoundFootStep(); // stop quand on s’arrête vraiment
         }
     }
 
-    void HandleHeadBob()
+    private void HandleHeadBob()
     {
         if (!controller.isGrounded)
         {

@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Attenuation Name="Puzzle_Attenuation" ID="{FBDFA799-CE34-4C44-8323-EA35D9DF572B}" ShortID="435220590">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="3"/>
+						<Property Name="RadiusMax" Type="Real64" Value="30"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -21,12 +21,12 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>2</XPos>
+											<XPos>20</XPos>
 											<YPos>-3</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>3</XPos>
+											<XPos>30</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>

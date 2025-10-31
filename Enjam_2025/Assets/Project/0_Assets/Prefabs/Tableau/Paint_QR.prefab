@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3958161417659476334}
   - component: {fileID: 1758991218477917409}
   - component: {fileID: 6014460805770338213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Paint_QR
   m_TagString: Untagged
   m_Icon: {fileID: 0}

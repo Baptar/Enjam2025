@@ -38,6 +38,8 @@ public class PaintingFlipComponent : MonoBehaviour, IInteractable
     public void Interact(PlayerInteractor interactor)
     {
         if (!GetIsInteractable()) return;
+        if (PaintingFlipManagers.Instance == null) return;
+        
         
         AudioManager.instance.PlaySoundInteract();
         AudioManager.instance.PlaySoundInteractPaint();

@@ -31,12 +31,10 @@ public class DoorComponent : MonoBehaviour, IInteractable
     
     private Outline outline;
     private bool inZone = false;
-    public float startRotateValue;
     
     private void Start()
     {
         outline = GetComponent<Outline>();
-        startRotateValue = gameObject.transform.localEulerAngles.y;
         
         if (randomNumberDoor) doorNumber = UnityEngine.Random.Range(0, 99);
         if (initDoorNumberAtStart) InitTextDoorWithNumber();
@@ -92,8 +90,6 @@ public class DoorComponent : MonoBehaviour, IInteractable
     /// </summary>
     private void OnInteract()
     {
-        //AudioManager.instance.PlaySoundInteract();
-        
         // can't interact with anymore
         SetIsInteractable(false);
         
@@ -145,6 +141,9 @@ public class DoorComponent : MonoBehaviour, IInteractable
     {
         PlayerController playerController = PlayerController.instance;
         
+        // remove sound FS
+        AudioManager.instance.StopPlaySoundFootStep();
+        
         // remove player input
         playerController.enabled = false;
         
@@ -163,33 +162,37 @@ public class DoorComponent : MonoBehaviour, IInteractable
             .SetEase(rotationEase);
         
 
+        // --- rotation de la porte ---
+        Quaternion startRot = transform.localRotation;
+        Quaternion openRot = Quaternion.Euler(startRot.eulerAngles.x, newRotateValue, startRot.eulerAngles.z); // rotation ouverte
+        
         //AudioManager.instance.PlaySoundDoorOpen();
         Sequence seq = DOTween.Sequence();
         // open door
-        seq.Append(gameObject.transform.DOLocalRotate(new Vector3(gameObject.transform.localEulerAngles.x, newRotateValue, gameObject.transform.localEulerAngles.z), durationRotate).SetEase(Ease.InOutFlash));
+        seq.Append(transform.DOLocalRotateQuaternion(openRot, durationRotate).SetEase(Ease.InOutFlash));
         
         // move player
         Vector3 targetLocalPosition = new Vector3(moveTarget.transform.position.x, playerController.gameObject.transform.position.y, moveTarget.transform.position.z);
-        seq.Insert(0.7f,
-                playerController.gameObject.transform.DOMove(targetLocalPosition, 2.0f)
-                    .SetEase(Ease.InOutSine))
+        seq.Insert(0.7f, playerController.gameObject.transform.DOMove(targetLocalPosition, 2.0f)
+            .SetEase(Ease.InOutSine)
+            .OnStart(() =>
+            {
+                AudioManager.instance.PlaySoundFootStep();
+            }))
             // add player input
             .Insert(2.0f, DOVirtual.DelayedCall(0, () =>
             {
                 playerController.enabled = true; 
-                PlayerController.instance.SetYaw(targetEuler.y);
+                playerController.SetYaw(targetEuler.y);
                 playerController.blockCamera = false;  
                 if (makeItDisappearAfterOpen) 
                     // deactivate elements of door to make the new one appear at the same place
                     foreach (GameObject go in elementToRemoveWhenOpenDoor)
                         go.SetActive(false);
             }))
-            // move door
+            // close door
             .Insert(1.7f,
-                gameObject.transform
-                    .DOLocalRotate(
-                        new Vector3(gameObject.transform.localEulerAngles.x, 0,
-                            gameObject.transform.localEulerAngles.z), durationRotate).SetEase(Ease.InOutFlash))
+                transform.DOLocalRotateQuaternion(startRot, durationRotate / 2).SetEase(Ease.InOutFlash))
             // manage corridor Data
             .Insert(1.9f, DOVirtual.DelayedCall(0, () =>
             {
