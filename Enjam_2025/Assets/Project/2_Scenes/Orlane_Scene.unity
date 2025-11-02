@@ -482,7 +482,7 @@ MonoBehaviour:
   - {fileID: 3195559609175881397, guid: ebaf2ef7493eadd45ae7a3e6bfc33294, type: 3}
   - {fileID: 714690043814067230, guid: 0f812e59f5852704c837c666876b0047, type: 3}
   - {fileID: 6707785693421383184, guid: db2af77372fc5ec4aa52424734bf3ab0, type: 3}
-  - {fileID: 5609169048991818267, guid: a2b4863e49858b344accae1d5a6f94c1, type: 3}
+  - {fileID: 714690043814067230, guid: 271a0f2e214cd4c43bdcf5abb2989b3f, type: 3}
   - {fileID: 3486626656995114446, guid: ff8a1f56d683c2a4bbe9ad023347c3cb, type: 3}
   nextTransformCorridorSpawnINFINITY: {fileID: 0}
   lastInfinityCorridorCreated: {fileID: 0}
@@ -678,10 +678,18 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: d4804c20a16464b4f9dbcc8aa8be6b42, type: 2}
+  stopRadioEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4a6d22bc109325648a6763d5afd441c2, type: 2}
   footStepEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 2925978d86d4da0459414afe70866dd9, type: 2}
+  stopFootStepEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0c84e6d883fd48b4db6d130f29392d62, type: 2}
   doorOpenEvent:
     idInternal: 0
     valueGuidInternal: 
@@ -706,6 +714,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ccb0cf96b596f52418c493c7e7dbc73a, type: 2}
+  stopFlipRoomEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: abcffe355962d7a4d8b53dacd4553e6c, type: 2}
   isPlayingRadio: 0
 --- !u!114 &1093371205
 MonoBehaviour:
@@ -1082,6 +1094,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6294754125132646183, guid: 0360b4e9bfcecdd44b9d8ff03b9d9ebf, type: 3}
+      propertyPath: doorIDLinked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7862491021986405564, guid: 0360b4e9bfcecdd44b9d8ff03b9d9ebf, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1361,15 +1377,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5969993198574930075, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.06
+      value: 8.115
       objectReference: {fileID: 0}
     - target: {fileID: 5969993198574930075, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.571
+      value: 1.617
       objectReference: {fileID: 0}
     - target: {fileID: 5969993198574930075, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.82
+      value: -1.958
       objectReference: {fileID: 0}
     - target: {fileID: 5969993198574930075, guid: 944a6424343bd814dbb7d51dedeed619, type: 3}
       propertyPath: m_LocalRotation.w

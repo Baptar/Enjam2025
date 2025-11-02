@@ -7949,6 +7949,10 @@ PrefabInstance:
       propertyPath: initDoorNumberAtStart
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8286275179131531750, guid: 7f0b5da4ca0ebf34db1641ac28ddecba, type: 3}
+      propertyPath: initNextDoorNumberBehind
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9218924711519858918, guid: 7f0b5da4ca0ebf34db1641ac28ddecba, type: 3}
       propertyPath: m_text
       value: END

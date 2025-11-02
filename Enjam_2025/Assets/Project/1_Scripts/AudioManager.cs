@@ -8,13 +8,16 @@ public class AudioManager : MonoBehaviour
     [Header("Audio References")] 
     [SerializeField] private AK.Wwise.Event ambiance;
     [SerializeField] private AK.Wwise.Event radioEvent;
+    [SerializeField] private AK.Wwise.Event stopRadioEvent;
     [SerializeField] private AK.Wwise.Event footStepEvent;/////////////////////////////TO TEST
+    [SerializeField] private AK.Wwise.Event stopFootStepEvent;/////////////////////////////TO TEST
     [SerializeField] private AK.Wwise.Event doorOpenEvent;/////////////////////////////TO TEST
     [SerializeField] private AK.Wwise.Event doorKnockEvent;/////////////////////////////TO TEST
     [SerializeField] private AK.Wwise.Event lightEvent;/////////////////////////////TO TEST
     [SerializeField] private AK.Wwise.Event interactEvent;////////////////////////////TO TEST
     [SerializeField] private AK.Wwise.Event interactPaintEvent;////////////////////////////TO TEST
     [SerializeField] private AK.Wwise.Event flipRoomEvent;////////////////////////////TO TEST
+    [SerializeField] private AK.Wwise.Event stopFlipRoomEvent;////////////////////////////TO TEST
 
 
     private uint playing_FS_ID;
@@ -31,27 +34,28 @@ public class AudioManager : MonoBehaviour
 
     public void PlayRadio()
     {
-        AkSoundEngine.StopPlayingID(playing_radio_ID);
-        playing_radio_ID = radioEvent.Post(gameObject);
+        //AkSoundEngine.StopPlayingID(playing_radio_ID);
+        /*playing_radio_ID = */radioEvent.Post(gameObject);
         isPlayingRadio = true;
     }
 
     public void StopRadio()
     {
-        AkSoundEngine.StopPlayingID(playing_radio_ID);
+        //AkSoundEngine.StopPlayingID(playing_radio_ID);
+        stopRadioEvent.Post(gameObject);
         isPlayingRadio = false;
     }
 
 
     public void PlaySoundFootStep()
     {
-        playing_FS_ID = footStepEvent.Post(gameObject);
+        /*playing_FS_ID = */footStepEvent.Post(gameObject);
     }
 
     public void StopPlaySoundFootStep()
     {
-        Debug.Log("Stop PlaySoundFootStep");
-        AkSoundEngine.StopPlayingID(playing_FS_ID);
+        //AkSoundEngine.StopPlayingID(playing_FS_ID);
+        stopFootStepEvent.Post(gameObject);
     }
     
     public void PlaySoundDoorKnock(GameObject door) => doorKnockEvent.Post(door);
@@ -65,4 +69,5 @@ public class AudioManager : MonoBehaviour
     public void PlaySoundInteractPaint() => interactPaintEvent.Post(gameObject);
     
     public void PlaySoundFlipRoom() => flipRoomEvent.Post(gameObject);
+    public void StopSoundFlipRoom() => stopFlipRoomEvent.Post(gameObject);
 }

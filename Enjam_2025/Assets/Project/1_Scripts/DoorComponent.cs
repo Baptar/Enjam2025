@@ -13,6 +13,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
     [SerializeField] private Transform corridorTransform;
     [SerializeField] private bool isInteractable;
     [SerializeField] private bool initDoorNumberAtStart = true;
+    [SerializeField] private bool initNextDoorNumberBehind = true;
     [SerializeField] private bool makeItDisappearAfterOpen = false;
     
     [Space(10)]
@@ -104,7 +105,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
         
         if (corridor.TryGetComponent(out CorridorGenerated corridorGenerated))
         {
-            corridorGenerated.OnCorridorGenerated(doorNumber, doorIDLinked != 4);
+            corridorGenerated.OnCorridorGenerated(doorNumber, initNextDoorNumberBehind);
         }
     }
     

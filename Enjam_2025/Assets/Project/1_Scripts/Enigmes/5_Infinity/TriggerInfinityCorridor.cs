@@ -12,22 +12,31 @@ public class TriggerInfinityCorridor : MonoBehaviour
     private MeshRenderer meshRenderer;
     
     private bool spawnedNewCorridor = false;
+    
+    private bool initialized = false;
+    private Vector3 lookDir;
 
     private void Start()
     {
-        meshCollider = GetComponent<MeshCollider>();
-        meshRenderer = GetComponent<MeshRenderer>();
+        lookDir = PlayerController.instance.transform.position - transform.position;
+        lookDir.y = 0; // ignore la hauteur
+
+        initialized = true;
     }
 
     private void Update()
     {
         if (meshRenderer == null) return;
         if (meshRenderer.enabled) return;
-
-        if (FrustumCheck.CanSpawnDoor(meshRenderer))
+        if (!initialized) return;
+        
+        //Debug.Log(FrustumCheck.IsBehind(meshRenderer.gameObject.transform, PlayerController.instance.playerCamera.gameObject.transform.position, Vector3.right));
+        
+        if (FrustumCheck.CanSpawnDoor(meshRenderer, lookDir.normalized))
         {
             EnableElements(true);
             enabled = false;
+            corridorGenerated.MakeAfterElementAppear(true);
             corridorGenerated.RemovePreviousCorridor();
         }
     }

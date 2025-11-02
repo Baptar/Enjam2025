@@ -54,6 +54,7 @@ public class PaintingFlipManagers : MonoBehaviour
             .OnComplete(() =>
             {
                 doorEnd.SetIsInteractable(true);
+                AudioManager.instance.StopSoundFlipRoom();
             });
     }
 
