@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
+  outlineMode: 1
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 1.94
   precomputeOutline: 0
@@ -450,5 +450,6 @@ MonoBehaviour:
   - {fileID: 4525883313827595774}
   - {fileID: 2416536381801437594}
   - {fileID: 2876455681144936733}
+  radio1: 0
   actualRadio: 0
   solutionRadio: 0
