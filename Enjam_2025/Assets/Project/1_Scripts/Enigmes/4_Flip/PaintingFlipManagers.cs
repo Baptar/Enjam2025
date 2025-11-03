@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -6,39 +7,36 @@ public class PaintingFlipManagers : MonoBehaviour
 {
     public static PaintingFlipManagers Instance;
     
-    [SerializeField] private PaintingFlipComponent[] paintingComponents;
     [SerializeField] private TMP_Text doorText;
     [SerializeField] private GameObject corridorGo;
     [SerializeField] private float durationRotate = 5.0f;
     [SerializeField] private Ease ease = Ease.Linear;
     [SerializeField] private DoorComponent doorEnd;
+    public int numberPaintFlippedAtStart;
 
+    public List<PaintingFlipComponent> paintingComponents = new List<PaintingFlipComponent>();
+    private bool isFlipped = true;
+    private bool isFlipping = false;
+    
     private void Awake() => Instance = this;
 
     private void Start()
     {
-        InitPaints();
         doorText.text = "END";
         doorEnd.SetIsInteractable(false);
-    }
-
-    private void InitPaints()
-    {
-        int value = Random.Range(0, paintingComponents.Length);
-
-        for (int i = 0; i < paintingComponents.Length; i++)
-        {
-            paintingComponents[i].SetIsFlipped(value != i);
-            paintingComponents[i].InitRotation();
-        }
     }
     
     public void CheckPaintingFlipped()
     {
+        if (isFlipping) return;
+        
         foreach (PaintingFlipComponent paintingComponent in paintingComponents)
         {
             if (paintingComponent.GetIsFlipped())
+            {
+                if (!isFlipped) FlipRoom();
                 return;
+            }
         }
 
         FlipRoom();
@@ -46,6 +44,7 @@ public class PaintingFlipManagers : MonoBehaviour
 
     private void FlipRoom()
     {
+        isFlipping = true;
         AudioManager.instance.PlaySoundFlipRoom();
         
         Debug.Log("Flip Room");
@@ -53,8 +52,10 @@ public class PaintingFlipManagers : MonoBehaviour
         corridorGo.transform.DOLocalRotate(new Vector3(-180, corridorGo.transform.localEulerAngles.y, corridorGo.transform.localEulerAngles.z), durationRotate).SetEase(ease)
             .OnComplete(() =>
             {
+                isFlipping = false;
                 doorEnd.SetIsInteractable(true);
                 AudioManager.instance.StopSoundFlipRoom();
+                isFlipped = !isFlipped;
             });
     }
 
@@ -64,5 +65,10 @@ public class PaintingFlipManagers : MonoBehaviour
         seq.Append(doorText.DOFade(0, 1.0f))
             .AppendCallback(() => doorText.text = "START").SetEase(ease)
             .Insert(0.0f, doorText.DOFade(1, 1.0f));
+    }
+
+    public void AddPaintToList(PaintingFlipComponent paintingComponent)
+    {
+        paintingComponents.Add(paintingComponent);
     }
 }

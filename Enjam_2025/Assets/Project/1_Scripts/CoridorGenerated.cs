@@ -30,9 +30,10 @@ public class CorridorGenerated : MonoBehaviour
         }
     }
     
-    public void OnCorridorGenerated(int doorNumber, bool displayOnNewDoorNumber)
+    public void OnCorridorGenerated(int doorNumber, bool displayOnNewDoorNumber, bool isPreviousDoorInfinity)
     {
-        if (displayOnNewDoorNumber) firstDoorOfCoridor.SetDoorNumberBehind(doorNumber);
+        if (isPreviousDoorInfinity) firstDoorOfCoridor.FirstInfinityDoorOpened();
+        else if (displayOnNewDoorNumber) firstDoorOfCoridor.SetDoorNumberBehind(doorNumber);
             
         //set the door that is opening to not interactable
         firstDoorOfCoridor.SetIsInteractable(false);

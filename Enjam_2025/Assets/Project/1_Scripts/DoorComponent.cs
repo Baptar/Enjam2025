@@ -30,6 +30,12 @@ public class DoorComponent : MonoBehaviour, IInteractable
     [SerializeField] private GameObject moveTarget;
     [SerializeField] private CorridorGenerated corridorGenerated;
     
+    [Space(10)]
+    [Header("Infinity")]
+    [SerializeField] private bool isPreviousDoorInfinity = false;
+    [SerializeField] private GameObject startText;
+    [SerializeField] private GameObject behindElement;
+    
     private Outline outline;
     private bool inZone = false;
     
@@ -105,7 +111,7 @@ public class DoorComponent : MonoBehaviour, IInteractable
         
         if (corridor.TryGetComponent(out CorridorGenerated corridorGenerated))
         {
-            corridorGenerated.OnCorridorGenerated(doorNumber, initNextDoorNumberBehind);
+            corridorGenerated.OnCorridorGenerated(doorNumber, initNextDoorNumberBehind, isPreviousDoorInfinity);
         }
     }
     
@@ -213,5 +219,11 @@ public class DoorComponent : MonoBehaviour, IInteractable
     public void SetDoorNumberBehind(int number)
     {
         doorNumberBehindText.text = number.ToString();
+    }
+
+    public void FirstInfinityDoorOpened()
+    {
+        startText.SetActive(true);
+        behindElement.SetActive(false);
     }
 }

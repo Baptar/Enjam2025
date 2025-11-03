@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PaintManager : MonoBehaviour
 {
-    [SerializeField] private PaintComponent[] paintsComponent;
+    [SerializeField] private RandomPaint[] paintsComponent;
 
     private void Start()
     {
@@ -15,9 +15,11 @@ public class PaintManager : MonoBehaviour
         if (paintsComponent.Length == 0) return;
         
         int value = Random.Range(0,paintsComponent.Length);
-        Debug.Log(value);
-        
-        paintsComponent[value].DisplaySpiderman();
-        paintsComponent[value].doorComponent.doorIDLinked = 2;
+
+        for (int i = 0; i < paintsComponent.Length; i++)
+        {
+            paintsComponent[i].InitPaint(i == value);
+            if (i == value) paintsComponent[i].doorComponent.doorIDLinked = 2;
+        }
     }
 }
